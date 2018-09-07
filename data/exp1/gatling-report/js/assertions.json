@@ -1,0 +1,27 @@
+{
+  "simulation": "simulations.PeakAndSoak",
+  "simulationId": "peakandsoak",
+  "start": 1536318943443,
+  "description": "",
+  "scenarios": ["PeakAndSoakScenario"],
+  "assertions": [
+{
+  "path": "Global",
+  "target": "percentage of failed requests",
+  "condition": "is less than or equal to",
+  "expectedValues": [1.0],
+  "result": true,
+  "message": "Global: percentage of failed requests is less than or equal to 1.0",
+  "actualValue": [0.0]
+},
+{
+  "path": "Global",
+  "target": "99th percentile of response time",
+  "condition": "is less than",
+  "expectedValues": [50.0],
+  "result": false,
+  "message": "Global: 99th percentile of response time is less than 50.0",
+  "actualValue": [7487.0]
+}
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "chaoslib-version": "0.20.0",
+  "platform": "Darwin-16.7.0-x86_64-i386-64bit",
+  "node": "OSTML0244651",
+  "experiment": {
+    "version": "1.0.0",
+    "title": "What happens if a latency is introduced on a proxy for cassandra",
+    "description": "We introduce a 400 ms latency on a single cassandra node",
+    "tags": [
+      "proxy"
+    ],
+    "steady-state-hypothesis": {
+      "title": "Proxy is found",
+      "probes": [
+        {
+          "type": "probe",
+          "name": "proxy-is-found",
+          "tolerance": "c1",
+          "provider": {
+            "type": "python",
+            "module": "chaostp.proxy.probes",
+            "func": "get_proxy",
+            "arguments": {
+              "name": "c1"
+            }
+          }
+        }
+      ]
+    },
+    "method": [
+      {
+        "type": "action",
+        "name": "delete_all_toxics",
+        "provider": {
+          "type": "python",
+          "module": "chaostp.proxy.actions",
+          "func": "delete_all_toxics",
+          "arguments": {
+            "name": "c1"
+          }
+        }
+      },
+      {
+        "type": "action",
+        "name": "200ms latency",
+        "provider": {
+          "type": "python",
+          "module": "chaostp.proxy.actions",
+          "func": "add_toxic",
+          "arguments": {
+            "name": "c1",
+            "type": "latency",
+            "stream": "downstream",
+            "attributes": {
+              "latency": 200
+            }
+          }
+        },
+        "pauses": {
+          "before": 10,
+          "after": 10
+        }
+      },
+      {
+        "type": "action",
+        "name": "delete_all_toxics",
+        "provider": {
+          "type": "python",
+          "module": "chaostp.proxy.actions",
+          "func": "delete_all_toxics",
+          "arguments": {
+            "name": "c1"
+          }
+        }
+      },
+      {
+        "type": "action",
+        "name": "400ms latency",
+        "provider": {
+          "type": "python",
+          "module": "chaostp.proxy.actions",
+          "func": "add_toxic",
+          "arguments": {
+            "name": "c1",
+            "type": "latency",
+            "stream": "downstream",
+            "attributes": {
+              "latency": 400
+            }
+          }
+        },
+        "pauses": {
+          "before": 10,
+          "after": 10
+        }
+      },
+      {
+        "type": "action",
+        "name": "delete_all_toxics",
+        "provider": {
+          "type": "python",
+          "module": "chaostp.proxy.actions",
+          "func": "delete_all_toxics",
+          "arguments": {
+            "name": "c1"
+          }
+        }
+      }
+    ],
+    "rollbacks": [],
+    "dry": false
+  },
+  "start": "2018-09-07T11:15:41.830060",
+  "status": "completed",
+  "steady_states": {
+    "before": {
+      "steady_state_met": true,
+      "probes": [
+        {
+          "activity": {
+            "type": "probe",
+            "name": "proxy-is-found",
+            "tolerance": "c1",
+            "provider": {
+              "type": "python",
+              "module": "chaostp.proxy.probes",
+              "func": "get_proxy",
+              "arguments": {
+                "name": "c1"
+              }
+            }
+          },
+          "output": "c1",
+          "status": "succeeded",
+          "start": "2018-09-07T11:15:41.831375",
+          "end": "2018-09-07T11:15:41.841138",
+          "duration": 0.009763,
+          "tolerance_met": true
+        }
+      ]
+    },
+    "after": {
+      "steady_state_met": true,
+      "probes": [
+        {
+          "activity": {
+            "type": "probe",
+            "name": "proxy-is-found",
+            "tolerance": "c1",
+            "provider": {
+              "type": "python",
+              "module": "chaostp.proxy.probes",
+              "func": "get_proxy",
+              "arguments": {
+                "name": "c1"
+              }
+            }
+          },
+          "output": "c1",
+          "status": "succeeded",
+          "start": "2018-09-07T11:16:21.941556",
+          "end": "2018-09-07T11:16:21.947929",
+          "duration": 0.006373,
+          "tolerance_met": true
+        }
+      ]
+    }
+  },
+  "run": [
+    {
+      "activity": {
+        "type": "action",
+        "name": "delete_all_toxics",
+        "provider": {
+          "type": "python",
+          "module": "chaostp.proxy.actions",
+          "func": "delete_all_toxics",
+          "arguments": {
+            "name": "c1"
+          }
+        }
+      },
+      "output": 1,
+      "status": "succeeded",
+      "start": "2018-09-07T11:15:41.841771",
+      "end": "2018-09-07T11:15:41.868554",
+      "duration": 0.026783
+    },
+    {
+      "activity": {
+        "type": "action",
+        "name": "200ms latency",
+        "provider": {
+          "type": "python",
+          "module": "chaostp.proxy.actions",
+          "func": "add_toxic",
+          "arguments": {
+            "name": "c1",
+            "type": "latency",
+            "stream": "downstream",
+            "attributes": {
+              "latency": 200
+            }
+          }
+        },
+        "pauses": {
+          "before": 10,
+          "after": 10
+        }
+      },
+      "output": 1,
+      "status": "succeeded",
+      "start": "2018-09-07T11:15:51.875988",
+      "end": "2018-09-07T11:15:51.889778",
+      "duration": 0.01379
+    },
+    {
+      "activity": {
+        "type": "action",
+        "name": "delete_all_toxics",
+        "provider": {
+          "type": "python",
+          "module": "chaostp.proxy.actions",
+          "func": "delete_all_toxics",
+          "arguments": {
+            "name": "c1"
+          }
+        }
+      },
+      "output": 1,
+      "status": "succeeded",
+      "start": "2018-09-07T11:16:01.892489",
+      "end": "2018-09-07T11:16:01.905998",
+      "duration": 0.013509
+    },
+    {
+      "activity": {
+        "type": "action",
+        "name": "400ms latency",
+        "provider": {
+          "type": "python",
+          "module": "chaostp.proxy.actions",
+          "func": "add_toxic",
+          "arguments": {
+            "name": "c1",
+            "type": "latency",
+            "stream": "downstream",
+            "attributes": {
+              "latency": 400
+            }
+          }
+        },
+        "pauses": {
+          "before": 10,
+          "after": 10
+        }
+      },
+      "output": 1,
+      "status": "succeeded",
+      "start": "2018-09-07T11:16:11.907716",
+      "end": "2018-09-07T11:16:11.915504",
+      "duration": 0.007788
+    },
+    {
+      "activity": {
+        "type": "action",
+        "name": "delete_all_toxics",
+        "provider": {
+          "type": "python",
+          "module": "chaostp.proxy.actions",
+          "func": "delete_all_toxics",
+          "arguments": {
+            "name": "c1"
+          }
+        }
+      },
+      "output": 1,
+      "status": "succeeded",
+      "start": "2018-09-07T11:16:21.917603",
+      "end": "2018-09-07T11:16:21.941075",
+      "duration": 0.023472
+    }
+  ],
+  "rollbacks": [],
+  "end": "2018-09-07T11:16:21.948570",
+  "duration": 40.14502191543579
+}

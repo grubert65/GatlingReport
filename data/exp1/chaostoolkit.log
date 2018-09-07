@@ -1,0 +1,1591 @@
+[36m[2018-09-05 15:55:28 DEBUG][39m ###############################################################################
+[36m[2018-09-05 15:55:28 DEBUG][39m Running command 'run'
+[36m[2018-09-05 15:55:28 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 15:55:28 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 15:55:28 DEBUG][39m Building activity cache...
+[36m[2018-09-05 15:55:28 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 15:55:28 INFO][39m Validating the experiment's syntax
+[36m[2018-09-05 15:55:28 DEBUG][39m Loading configuration...
+[36m[2018-09-05 15:55:28 DEBUG][39m Loading secrets...
+[36m[2018-09-05 15:55:28 DEBUG][39m Secrets loaded
+[32m[2018-09-05 15:55:28 INFO][39m Experiment looks valid
+[36m[2018-09-05 15:55:28 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 15:55:28 DEBUG][39m Building activity cache...
+[36m[2018-09-05 15:55:28 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 15:55:28 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-05 15:55:28 DEBUG][39m Loading configuration...
+[36m[2018-09-05 15:55:28 DEBUG][39m Loading secrets...
+[36m[2018-09-05 15:55:28 DEBUG][39m Secrets loaded
+[32m[2018-09-05 15:55:28 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 15:55:28 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 15:55:28 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 15:55:28 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 15:55:28 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 15:55:28 INFO][39m Pausing before next activity for 10s...
+[32m[2018-09-05 15:55:38 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-05 15:55:38 DEBUG][39m -- add_toxic -- Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 400}'
+[36m[2018-09-05 15:55:38 DEBUG][39m -- add_toxic -- Toxic added
+[36m[2018-09-05 15:55:38 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 15:55:38 INFO][39m Pausing after activity for 20s...
+[32m[2018-09-05 15:55:58 INFO][39m Action: delete-a-latency-toxic
+[36m[2018-09-05 15:55:58 DEBUG][39m -- delete_toxic -- Proxy: 'c1', Toxic type 'latency'
+[36m[2018-09-05 15:55:58 DEBUG][39m -- delete_toxic -- Toxic deleted
+[36m[2018-09-05 15:55:58 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 15:55:58 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 15:55:58 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 15:55:58 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 15:55:58 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 15:55:58 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 15:55:58 INFO][39m Let's rollback...
+[32m[2018-09-05 15:55:58 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-05 15:55:58 INFO][39m Experiment ended with status: completed
+[36m[2018-09-05 15:55:58 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 15:55:58 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 15:55:58 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-05 15:56:20 DEBUG][39m ###############################################################################
+[36m[2018-09-05 15:56:20 DEBUG][39m Running command 'run'
+[36m[2018-09-05 15:56:20 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 15:56:20 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 15:56:20 DEBUG][39m Building activity cache...
+[36m[2018-09-05 15:56:20 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 15:56:20 INFO][39m Validating the experiment's syntax
+[36m[2018-09-05 15:56:20 DEBUG][39m Loading configuration...
+[36m[2018-09-05 15:56:20 DEBUG][39m Loading secrets...
+[36m[2018-09-05 15:56:20 DEBUG][39m Secrets loaded
+[32m[2018-09-05 15:56:20 INFO][39m Experiment looks valid
+[36m[2018-09-05 15:56:20 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 15:56:20 DEBUG][39m Building activity cache...
+[36m[2018-09-05 15:56:20 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 15:56:20 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-05 15:56:20 DEBUG][39m Loading configuration...
+[36m[2018-09-05 15:56:20 DEBUG][39m Loading secrets...
+[36m[2018-09-05 15:56:20 DEBUG][39m Secrets loaded
+[32m[2018-09-05 15:56:20 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 15:56:20 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 15:56:20 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 15:56:20 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 15:56:20 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 15:56:20 INFO][39m Pausing before next activity for 10s...
+[32m[2018-09-05 15:56:30 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-05 15:56:30 DEBUG][39m -- add_toxic -- Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 400}'
+[36m[2018-09-05 15:56:30 DEBUG][39m -- add_toxic -- Toxic added
+[36m[2018-09-05 15:56:30 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 15:56:30 INFO][39m Pausing after activity for 20s...
+[32m[2018-09-05 15:56:50 INFO][39m Action: delete-a-latency-toxic
+[36m[2018-09-05 15:56:50 DEBUG][39m -- delete_toxic -- Proxy: 'c1', Toxic type 'latency'
+[36m[2018-09-05 15:56:50 DEBUG][39m -- delete_toxic -- Toxic deleted
+[36m[2018-09-05 15:56:50 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 15:56:50 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 15:56:50 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 15:56:50 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 15:56:50 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 15:56:50 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 15:56:50 INFO][39m Let's rollback...
+[32m[2018-09-05 15:56:50 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-05 15:56:50 INFO][39m Experiment ended with status: completed
+[36m[2018-09-05 15:56:50 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 15:56:50 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 15:56:50 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-05 15:57:36 DEBUG][39m ###############################################################################
+[36m[2018-09-05 15:57:36 DEBUG][39m Running command 'run'
+[36m[2018-09-05 15:57:36 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 15:57:36 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 15:57:36 DEBUG][39m Building activity cache...
+[36m[2018-09-05 15:57:36 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 15:57:36 INFO][39m Validating the experiment's syntax
+[36m[2018-09-05 15:57:36 DEBUG][39m Loading configuration...
+[36m[2018-09-05 15:57:36 DEBUG][39m Loading secrets...
+[36m[2018-09-05 15:57:36 DEBUG][39m Secrets loaded
+[32m[2018-09-05 15:57:36 INFO][39m Experiment looks valid
+[36m[2018-09-05 15:57:36 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 15:57:36 DEBUG][39m Building activity cache...
+[36m[2018-09-05 15:57:36 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 15:57:36 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-05 15:57:36 DEBUG][39m Loading configuration...
+[36m[2018-09-05 15:57:36 DEBUG][39m Loading secrets...
+[36m[2018-09-05 15:57:36 DEBUG][39m Secrets loaded
+[32m[2018-09-05 15:57:36 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 15:57:36 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 15:57:36 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 15:57:36 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 15:57:36 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 15:57:36 INFO][39m Pausing before next activity for 10s...
+[32m[2018-09-05 15:57:46 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-05 15:57:46 DEBUG][39m -- add_toxic -- Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 400}'
+[36m[2018-09-05 15:57:46 DEBUG][39m -- add_toxic -- Toxic added
+[36m[2018-09-05 15:57:46 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 15:57:46 INFO][39m Pausing after activity for 20s...
+[32m[2018-09-05 15:58:06 INFO][39m Action: delete-a-latency-toxic
+[36m[2018-09-05 15:58:06 DEBUG][39m -- delete_toxic -- Proxy: 'c1', Toxic type 'latency'
+[36m[2018-09-05 15:58:06 DEBUG][39m -- delete_toxic -- Toxic deleted
+[36m[2018-09-05 15:58:06 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 15:58:06 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 15:58:06 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 15:58:06 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 15:58:06 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 15:58:06 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 15:58:06 INFO][39m Let's rollback...
+[32m[2018-09-05 15:58:06 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-05 15:58:06 INFO][39m Experiment ended with status: completed
+[36m[2018-09-05 15:58:06 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 15:58:06 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 15:58:06 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-05 16:02:16 DEBUG][39m ###############################################################################
+[36m[2018-09-05 16:02:16 DEBUG][39m Running command 'run'
+[36m[2018-09-05 16:02:16 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 16:02:16 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 16:02:16 DEBUG][39m Building activity cache...
+[36m[2018-09-05 16:02:16 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 16:02:16 INFO][39m Validating the experiment's syntax
+[36m[2018-09-05 16:02:16 DEBUG][39m Loading configuration...
+[36m[2018-09-05 16:02:16 DEBUG][39m Loading secrets...
+[36m[2018-09-05 16:02:16 DEBUG][39m Secrets loaded
+[32m[2018-09-05 16:02:16 INFO][39m Experiment looks valid
+[36m[2018-09-05 16:02:16 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 16:02:16 DEBUG][39m Building activity cache...
+[36m[2018-09-05 16:02:16 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 16:02:16 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-05 16:02:16 DEBUG][39m Loading configuration...
+[36m[2018-09-05 16:02:16 DEBUG][39m Loading secrets...
+[36m[2018-09-05 16:02:16 DEBUG][39m Secrets loaded
+[32m[2018-09-05 16:02:16 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 16:02:16 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 16:02:16 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 16:02:16 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 16:02:16 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 16:02:16 INFO][39m Pausing before next activity for 15s...
+[32m[2018-09-05 16:02:31 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-05 16:02:31 DEBUG][39m -- add_toxic -- Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 200}'
+[36m[2018-09-05 16:02:31 DEBUG][39m -- add_toxic -- Toxic added
+[36m[2018-09-05 16:02:31 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 16:02:31 INFO][39m Pausing after activity for 20s...
+[32m[2018-09-05 16:02:51 INFO][39m Action: delete-a-latency-toxic
+[36m[2018-09-05 16:02:51 DEBUG][39m -- delete_toxic -- Proxy: 'c1', Toxic type 'latency'
+[36m[2018-09-05 16:02:52 DEBUG][39m -- delete_toxic -- Toxic deleted
+[36m[2018-09-05 16:02:52 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 16:02:52 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 16:02:52 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 16:02:52 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 16:02:52 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 16:02:52 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 16:02:52 INFO][39m Let's rollback...
+[32m[2018-09-05 16:02:52 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-05 16:02:52 INFO][39m Experiment ended with status: completed
+[36m[2018-09-05 16:02:52 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 16:02:52 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 16:02:52 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-05 16:11:32 DEBUG][39m ###############################################################################
+[36m[2018-09-05 16:11:32 DEBUG][39m Running command 'report'
+[36m[2018-09-05 16:11:32 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 16:12:08 DEBUG][39m ###############################################################################
+[36m[2018-09-05 16:12:08 DEBUG][39m Running command 'report'
+[36m[2018-09-05 16:12:08 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 16:12:28 DEBUG][39m ###############################################################################
+[36m[2018-09-05 16:12:28 DEBUG][39m Running command 'report'
+[36m[2018-09-05 16:12:28 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 16:12:41 DEBUG][39m ###############################################################################
+[36m[2018-09-05 16:12:41 DEBUG][39m Running command 'report'
+[36m[2018-09-05 16:12:41 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 16:12:53 DEBUG][39m ###############################################################################
+[36m[2018-09-05 16:12:53 DEBUG][39m Running command 'report'
+[36m[2018-09-05 16:12:53 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 16:46:29 DEBUG][39m ###############################################################################
+[36m[2018-09-05 16:46:29 DEBUG][39m Running command 'run'
+[36m[2018-09-05 16:46:29 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 16:46:29 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 16:46:29 DEBUG][39m Building activity cache...
+[36m[2018-09-05 16:46:29 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 16:46:29 INFO][39m Validating the experiment's syntax
+[36m[2018-09-05 16:46:29 DEBUG][39m Loading configuration...
+[36m[2018-09-05 16:46:29 DEBUG][39m Loading secrets...
+[36m[2018-09-05 16:46:29 DEBUG][39m Secrets loaded
+[32m[2018-09-05 16:46:29 INFO][39m Experiment looks valid
+[36m[2018-09-05 16:46:29 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 16:46:29 DEBUG][39m Building activity cache...
+[36m[2018-09-05 16:46:29 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 16:46:29 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-05 16:46:29 DEBUG][39m Loading configuration...
+[36m[2018-09-05 16:46:29 DEBUG][39m Loading secrets...
+[36m[2018-09-05 16:46:29 DEBUG][39m Secrets loaded
+[32m[2018-09-05 16:46:29 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 16:46:29 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 16:46:29 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 16:46:29 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 16:46:29 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 16:46:29 INFO][39m Pausing before next activity for 15s...
+[32m[2018-09-05 16:46:44 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-05 16:46:44 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 200}'
+[36m[2018-09-05 16:46:44 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-05 16:46:44 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 16:46:44 INFO][39m Pausing after activity for 20s...
+[32m[2018-09-05 16:47:04 INFO][39m Action: delete-a-latency-toxic
+[36m[2018-09-05 16:47:04 DEBUG][39m delete_toxic: Proxy: 'c1', Toxic type 'latency'
+[36m[2018-09-05 16:47:04 DEBUG][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaostoolkit_toxiproxy-0.0.1-py3.6.egg/chaostp/proxy/actions.py", line 82, in delete_toxic
+        label  = type + stream
+    NameError: name 'stream' is not defined
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/activity.py", line 218, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        sys.exc_info()[2])
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaostoolkit_toxiproxy-0.0.1-py3.6.egg/chaostp/proxy/actions.py", line 82, in delete_toxic
+        label  = type + stream
+    chaoslib.exceptions.ActivityFailed: NameError: name 'stream' is not defined
+[31m[2018-09-05 16:47:04 ERROR][39m   => failed: NameError: name 'stream' is not defined
+[32m[2018-09-05 16:47:04 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 16:47:04 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 16:47:04 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 16:47:04 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 16:47:04 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 16:47:04 INFO][39m Let's rollback...
+[32m[2018-09-05 16:47:04 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-05 16:47:04 INFO][39m Experiment ended with status: completed
+[36m[2018-09-05 16:47:04 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 16:47:04 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 16:47:04 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-05 16:49:02 DEBUG][39m ###############################################################################
+[36m[2018-09-05 16:49:02 DEBUG][39m Running command 'run'
+[36m[2018-09-05 16:49:02 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 16:49:02 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 16:49:02 DEBUG][39m Building activity cache...
+[36m[2018-09-05 16:49:02 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 16:49:02 INFO][39m Validating the experiment's syntax
+[36m[2018-09-05 16:49:02 DEBUG][39m Loading configuration...
+[36m[2018-09-05 16:49:02 DEBUG][39m Loading secrets...
+[36m[2018-09-05 16:49:02 DEBUG][39m Secrets loaded
+[32m[2018-09-05 16:49:02 INFO][39m Experiment looks valid
+[36m[2018-09-05 16:49:02 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 16:49:02 DEBUG][39m Building activity cache...
+[36m[2018-09-05 16:49:02 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 16:49:02 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-05 16:49:02 DEBUG][39m Loading configuration...
+[36m[2018-09-05 16:49:02 DEBUG][39m Loading secrets...
+[36m[2018-09-05 16:49:02 DEBUG][39m Secrets loaded
+[32m[2018-09-05 16:49:03 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 16:49:03 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 16:49:03 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 16:49:03 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 16:49:03 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 16:49:03 INFO][39m Pausing before next activity for 15s...
+[32m[2018-09-05 16:49:18 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-05 16:49:18 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 400}'
+[36m[2018-09-05 16:49:18 DEBUG][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaostoolkit_toxiproxy-0.0.1-py3.6.egg/chaostp/proxy/actions.py", line 69, in add_toxic
+        proxy.add_toxic(type=type, stream=stream, attributes=attributes)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/proxy.py", line 71, in add_toxic
+        APIConsumer.post("/proxies/%s/toxics" % self.name, json=json).json()
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/api.py", line 35, in post
+        return validate_response(requests.post(url=endpoint, data=data, json=json, **kwargs))
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/api.py", line 47, in validate_response
+        raise_with_traceback(ProxyExists(content))
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/future/utils/__init__.py", line 419, in raise_with_traceback
+        raise exc.with_traceback(traceback)
+    toxiproxy.exceptions.ProxyExists: b'{"error":"toxic already exists","status":409}\n'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/activity.py", line 218, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        sys.exc_info()[2])
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaostoolkit_toxiproxy-0.0.1-py3.6.egg/chaostp/proxy/actions.py", line 69, in add_toxic
+        proxy.add_toxic(type=type, stream=stream, attributes=attributes)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/proxy.py", line 71, in add_toxic
+        APIConsumer.post("/proxies/%s/toxics" % self.name, json=json).json()
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/api.py", line 35, in post
+        return validate_response(requests.post(url=endpoint, data=data, json=json, **kwargs))
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/api.py", line 47, in validate_response
+        raise_with_traceback(ProxyExists(content))
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/future/utils/__init__.py", line 419, in raise_with_traceback
+        raise exc.with_traceback(traceback)
+    chaoslib.exceptions.ActivityFailed: toxiproxy.exceptions.ProxyExists: b'{"error":"toxic already exists","status":409}\n'
+[31m[2018-09-05 16:49:18 ERROR][39m   => failed: toxiproxy.exceptions.ProxyExists: b'{"error":"toxic already exists","status":409}\n'
+[32m[2018-09-05 16:49:18 INFO][39m Pausing after activity for 20s...
+[32m[2018-09-05 16:49:38 INFO][39m Action: delete-a-latency-toxic
+[36m[2018-09-05 16:49:38 DEBUG][39m delete_toxic: Proxy: 'c1', Toxic type 'latency'
+[36m[2018-09-05 16:49:38 DEBUG][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaostoolkit_toxiproxy-0.0.1-py3.6.egg/chaostp/proxy/actions.py", line 82, in delete_toxic
+        label  = type + stream
+    NameError: name 'stream' is not defined
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/activity.py", line 218, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        sys.exc_info()[2])
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaostoolkit_toxiproxy-0.0.1-py3.6.egg/chaostp/proxy/actions.py", line 82, in delete_toxic
+        label  = type + stream
+    chaoslib.exceptions.ActivityFailed: NameError: name 'stream' is not defined
+[31m[2018-09-05 16:49:38 ERROR][39m   => failed: NameError: name 'stream' is not defined
+[32m[2018-09-05 16:49:38 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 16:49:38 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 16:49:38 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 16:49:38 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 16:49:38 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 16:49:38 INFO][39m Let's rollback...
+[32m[2018-09-05 16:49:38 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-05 16:49:38 INFO][39m Experiment ended with status: completed
+[36m[2018-09-05 16:49:38 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 16:49:38 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 16:49:38 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-05 17:07:42 DEBUG][39m ###############################################################################
+[36m[2018-09-05 17:07:42 DEBUG][39m Running command 'run'
+[36m[2018-09-05 17:07:42 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 17:07:42 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:07:42 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:07:42 DEBUG][39m Cached 4 activities
+[32m[2018-09-05 17:07:42 INFO][39m Validating the experiment's syntax
+[36m[2018-09-05 17:07:42 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:07:42 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:07:42 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:07:42 INFO][39m Experiment looks valid
+[36m[2018-09-05 17:07:42 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:07:42 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:07:42 DEBUG][39m Cached 4 activities
+[32m[2018-09-05 17:07:42 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-05 17:07:42 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:07:42 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:07:42 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:07:42 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 17:07:42 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 17:07:42 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 17:07:42 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 17:07:42 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 17:07:42 INFO][39m Pausing before next activity for 15s...
+[32m[2018-09-05 17:07:57 INFO][39m Action: delete_all_toxics
+[36m[2018-09-05 17:07:57 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-05 17:07:57 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-05 17:07:57 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:07:57 INFO][39m Pausing after activity for 20s...
+[32m[2018-09-05 17:08:17 INFO][39m Pausing before next activity for 15s...
+[32m[2018-09-05 17:08:32 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-05 17:08:32 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 400}'
+[36m[2018-09-05 17:08:32 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-05 17:08:32 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:08:32 INFO][39m Pausing after activity for 20s...
+[32m[2018-09-05 17:08:52 INFO][39m Action: delete-a-latency-toxic
+[36m[2018-09-05 17:08:52 DEBUG][39m delete_toxic: Proxy: 'c1', Toxic type 'latency'
+[36m[2018-09-05 17:08:52 DEBUG][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaostoolkit_toxiproxy-0.0.1-py3.6.egg/chaostp/proxy/actions.py", line 83, in delete_toxic
+        label  = type + stream
+    NameError: name 'stream' is not defined
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/activity.py", line 218, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        sys.exc_info()[2])
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaostoolkit_toxiproxy-0.0.1-py3.6.egg/chaostp/proxy/actions.py", line 83, in delete_toxic
+        label  = type + stream
+    chaoslib.exceptions.ActivityFailed: NameError: name 'stream' is not defined
+[31m[2018-09-05 17:08:52 ERROR][39m   => failed: NameError: name 'stream' is not defined
+[32m[2018-09-05 17:08:52 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 17:08:52 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 17:08:52 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 17:08:52 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 17:08:52 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 17:08:52 INFO][39m Let's rollback...
+[32m[2018-09-05 17:08:52 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-05 17:08:52 INFO][39m Experiment ended with status: completed
+[36m[2018-09-05 17:08:52 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:08:52 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:08:52 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-05 17:10:09 DEBUG][39m ###############################################################################
+[36m[2018-09-05 17:10:09 DEBUG][39m Running command 'run'
+[36m[2018-09-05 17:10:09 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 17:10:09 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:10:09 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:10:09 DEBUG][39m Cached 4 activities
+[32m[2018-09-05 17:10:09 INFO][39m Validating the experiment's syntax
+[36m[2018-09-05 17:10:09 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:10:09 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:10:09 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:10:09 INFO][39m Experiment looks valid
+[36m[2018-09-05 17:10:09 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:10:09 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:10:09 DEBUG][39m Cached 4 activities
+[32m[2018-09-05 17:10:09 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-05 17:10:09 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:10:09 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:10:09 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:10:09 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 17:10:09 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 17:10:09 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 17:10:09 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 17:10:09 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 17:10:09 INFO][39m Pausing before next activity for 15s...
+[32m[2018-09-05 17:10:24 INFO][39m Action: delete_all_toxics
+[36m[2018-09-05 17:10:24 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-05 17:10:24 DEBUG][39m Found toxic latency_downstream
+[36m[2018-09-05 17:10:24 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-05 17:10:24 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:10:24 INFO][39m Pausing after activity for 20s...
+[33m[2018-09-05 17:10:33 WARNING][39m Received an exit signal, leaving without applying rollbacks.
+[32m[2018-09-05 17:10:33 INFO][39m Experiment ended with status: interrupted
+[36m[2018-09-05 17:10:33 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:10:33 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:10:33 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-05 17:10:38 DEBUG][39m ###############################################################################
+[36m[2018-09-05 17:10:38 DEBUG][39m Running command 'run'
+[36m[2018-09-05 17:10:38 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 17:10:38 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:10:49 DEBUG][39m ###############################################################################
+[36m[2018-09-05 17:10:49 DEBUG][39m Running command 'run'
+[36m[2018-09-05 17:10:49 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 17:10:49 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:10:49 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:10:49 DEBUG][39m Cached 4 activities
+[32m[2018-09-05 17:10:49 INFO][39m Validating the experiment's syntax
+[36m[2018-09-05 17:10:49 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:10:49 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:10:49 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:10:49 INFO][39m Experiment looks valid
+[36m[2018-09-05 17:10:49 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:10:49 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:10:49 DEBUG][39m Cached 4 activities
+[32m[2018-09-05 17:10:49 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-05 17:10:49 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:10:49 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:10:49 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:10:49 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 17:10:49 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 17:10:49 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 17:10:49 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 17:10:49 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 17:10:49 INFO][39m Action: delete_all_toxics
+[36m[2018-09-05 17:10:49 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-05 17:10:49 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-05 17:10:49 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:10:49 INFO][39m Pausing before next activity for 15s...
+[32m[2018-09-05 17:11:04 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-05 17:11:04 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 400}'
+[36m[2018-09-05 17:11:04 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-05 17:11:04 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:11:04 INFO][39m Pausing after activity for 20s...
+[32m[2018-09-05 17:11:24 INFO][39m Action: delete-a-latency-toxic
+[36m[2018-09-05 17:11:24 DEBUG][39m delete_toxic: Proxy: 'c1', Toxic type 'latency'
+[36m[2018-09-05 17:11:24 DEBUG][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaostoolkit_toxiproxy-0.0.1-py3.6.egg/chaostp/proxy/actions.py", line 83, in delete_toxic
+        label  = type + stream
+    NameError: name 'stream' is not defined
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/activity.py", line 218, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        sys.exc_info()[2])
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaostoolkit_toxiproxy-0.0.1-py3.6.egg/chaostp/proxy/actions.py", line 83, in delete_toxic
+        label  = type + stream
+    chaoslib.exceptions.ActivityFailed: NameError: name 'stream' is not defined
+[31m[2018-09-05 17:11:24 ERROR][39m   => failed: NameError: name 'stream' is not defined
+[32m[2018-09-05 17:11:24 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 17:11:24 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 17:11:24 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 17:11:24 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 17:11:24 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 17:11:24 INFO][39m Let's rollback...
+[32m[2018-09-05 17:11:24 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-05 17:11:24 INFO][39m Experiment ended with status: completed
+[36m[2018-09-05 17:11:24 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:11:24 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:11:24 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-05 17:12:23 DEBUG][39m ###############################################################################
+[36m[2018-09-05 17:12:23 DEBUG][39m Running command 'run'
+[36m[2018-09-05 17:12:23 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 17:12:23 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:12:23 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:12:23 DEBUG][39m Cached 4 activities
+[32m[2018-09-05 17:12:23 INFO][39m Validating the experiment's syntax
+[36m[2018-09-05 17:12:23 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:12:23 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:12:23 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:12:23 INFO][39m Experiment looks valid
+[36m[2018-09-05 17:12:23 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:12:23 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:12:23 DEBUG][39m Cached 4 activities
+[32m[2018-09-05 17:12:23 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-05 17:12:23 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:12:23 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:12:23 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:12:23 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 17:12:23 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 17:12:23 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 17:12:23 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 17:12:23 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 17:12:23 INFO][39m Action: delete_all_toxics
+[36m[2018-09-05 17:12:23 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-05 17:12:23 DEBUG][39m Found toxic latency_downstream
+[36m[2018-09-05 17:12:23 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-05 17:12:23 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:12:23 INFO][39m Pausing before next activity for 15s...
+[33m[2018-09-05 17:12:25 WARNING][39m Received an exit signal, leaving without applying rollbacks.
+[32m[2018-09-05 17:12:25 INFO][39m Experiment ended with status: interrupted
+[36m[2018-09-05 17:12:25 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:12:25 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:12:25 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-05 17:12:42 DEBUG][39m ###############################################################################
+[36m[2018-09-05 17:12:42 DEBUG][39m Running command 'run'
+[36m[2018-09-05 17:12:42 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 17:12:42 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:12:42 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:12:42 DEBUG][39m Cached 4 activities
+[32m[2018-09-05 17:12:42 INFO][39m Validating the experiment's syntax
+[36m[2018-09-05 17:12:42 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:12:42 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:12:42 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:12:42 INFO][39m Experiment looks valid
+[36m[2018-09-05 17:12:42 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:12:42 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:12:42 DEBUG][39m Cached 4 activities
+[32m[2018-09-05 17:12:42 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-05 17:12:42 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:12:42 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:12:42 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:12:42 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 17:12:42 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 17:12:42 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 17:12:42 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 17:12:42 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 17:12:42 INFO][39m Action: delete_all_toxics
+[36m[2018-09-05 17:12:42 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-05 17:12:42 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-05 17:12:42 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:12:42 INFO][39m Pausing before next activity for 5s...
+[32m[2018-09-05 17:12:47 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-05 17:12:47 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 400}'
+[36m[2018-09-05 17:12:47 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-05 17:12:47 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:12:47 INFO][39m Pausing after activity for 5s...
+[32m[2018-09-05 17:12:52 INFO][39m Action: delete-a-latency-toxic
+[36m[2018-09-05 17:12:52 DEBUG][39m delete_toxic: Proxy: 'c1', Toxic type 'latency'
+[36m[2018-09-05 17:12:52 DEBUG][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaostoolkit_toxiproxy-0.0.1-py3.6.egg/chaostp/proxy/actions.py", line 84, in delete_toxic
+        proxy.destroy_toxic(label)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/proxy.py", line 77, in destroy_toxic
+        return bool(APIConsumer.delete(delete_url))
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/api.py", line 28, in delete
+        return validate_response(requests.delete(url=endpoint, **kwargs))
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/api.py", line 49, in validate_response
+        raise_with_traceback(NotFound(content))
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/future/utils/__init__.py", line 419, in raise_with_traceback
+        raise exc.with_traceback(traceback)
+    toxiproxy.exceptions.NotFound: b'{"error":"toxic not found","status":404}\n'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/activity.py", line 218, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        sys.exc_info()[2])
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaostoolkit_toxiproxy-0.0.1-py3.6.egg/chaostp/proxy/actions.py", line 84, in delete_toxic
+        proxy.destroy_toxic(label)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/proxy.py", line 77, in destroy_toxic
+        return bool(APIConsumer.delete(delete_url))
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/api.py", line 28, in delete
+        return validate_response(requests.delete(url=endpoint, **kwargs))
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/api.py", line 49, in validate_response
+        raise_with_traceback(NotFound(content))
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/future/utils/__init__.py", line 419, in raise_with_traceback
+        raise exc.with_traceback(traceback)
+    chaoslib.exceptions.ActivityFailed: toxiproxy.exceptions.NotFound: b'{"error":"toxic not found","status":404}\n'
+[31m[2018-09-05 17:12:52 ERROR][39m   => failed: toxiproxy.exceptions.NotFound: b'{"error":"toxic not found","status":404}\n'
+[32m[2018-09-05 17:12:52 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 17:12:52 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 17:12:52 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 17:12:52 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 17:12:52 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 17:12:52 INFO][39m Let's rollback...
+[32m[2018-09-05 17:12:52 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-05 17:12:52 INFO][39m Experiment ended with status: completed
+[36m[2018-09-05 17:12:52 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:12:52 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:12:52 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-05 17:19:47 DEBUG][39m ###############################################################################
+[36m[2018-09-05 17:19:47 DEBUG][39m Running command 'run'
+[36m[2018-09-05 17:19:47 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 17:19:48 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:19:48 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:19:48 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 17:19:48 INFO][39m Validating the experiment's syntax
+[36m[2018-09-05 17:19:48 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:19:48 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:19:48 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:19:48 INFO][39m Experiment looks valid
+[36m[2018-09-05 17:19:48 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:19:48 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:19:48 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 17:19:48 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-05 17:19:48 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:19:48 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:19:48 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:19:48 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 17:19:48 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 17:19:48 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 17:19:48 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 17:19:48 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 17:19:48 INFO][39m Action: delete_all_toxics
+[36m[2018-09-05 17:19:48 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-05 17:19:48 DEBUG][39m Found toxic latency_downstream
+[36m[2018-09-05 17:19:48 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-05 17:19:48 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:19:48 INFO][39m Pausing before next activity for 5s...
+[32m[2018-09-05 17:19:53 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-05 17:19:53 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 500}'
+[36m[2018-09-05 17:19:53 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-05 17:19:53 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:19:53 INFO][39m Pausing after activity for 5s...
+[32m[2018-09-05 17:19:58 INFO][39m Action: delete_all_toxics
+[36m[2018-09-05 17:19:58 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-05 17:19:58 DEBUG][39m Found toxic latency_downstream
+[36m[2018-09-05 17:19:58 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-05 17:19:58 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:19:58 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 17:19:58 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 17:19:58 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 17:19:58 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 17:19:58 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 17:19:58 INFO][39m Let's rollback...
+[32m[2018-09-05 17:19:58 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-05 17:19:58 INFO][39m Experiment ended with status: completed
+[36m[2018-09-05 17:19:58 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:19:58 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:19:58 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-05 17:20:21 DEBUG][39m ###############################################################################
+[36m[2018-09-05 17:20:21 DEBUG][39m Running command 'run'
+[36m[2018-09-05 17:20:21 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 17:20:21 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:20:21 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:20:21 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 17:20:21 INFO][39m Validating the experiment's syntax
+[36m[2018-09-05 17:20:21 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:20:21 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:20:21 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:20:21 INFO][39m Experiment looks valid
+[36m[2018-09-05 17:20:21 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:20:21 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:20:21 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 17:20:21 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-05 17:20:21 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:20:21 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:20:21 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:20:21 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 17:20:21 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 17:20:21 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 17:20:21 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 17:20:21 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 17:20:21 INFO][39m Action: delete_all_toxics
+[36m[2018-09-05 17:20:21 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-05 17:20:21 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-05 17:20:21 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:20:21 INFO][39m Pausing before next activity for 5s...
+[32m[2018-09-05 17:20:26 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-05 17:20:26 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 500}'
+[36m[2018-09-05 17:20:26 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-05 17:20:26 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:20:26 INFO][39m Pausing after activity for 5s...
+[32m[2018-09-05 17:20:31 INFO][39m Action: delete_all_toxics
+[36m[2018-09-05 17:20:31 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-05 17:20:31 DEBUG][39m Found toxic latency_downstream
+[36m[2018-09-05 17:20:31 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-05 17:20:31 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:20:31 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 17:20:31 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 17:20:31 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 17:20:31 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 17:20:31 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 17:20:31 INFO][39m Let's rollback...
+[32m[2018-09-05 17:20:31 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-05 17:20:31 INFO][39m Experiment ended with status: completed
+[36m[2018-09-05 17:20:31 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:20:31 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:20:31 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-05 17:23:04 DEBUG][39m ###############################################################################
+[36m[2018-09-05 17:23:04 DEBUG][39m Running command 'run'
+[36m[2018-09-05 17:23:04 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-05 17:23:04 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:23:04 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:23:04 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 17:23:04 INFO][39m Validating the experiment's syntax
+[36m[2018-09-05 17:23:04 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:23:04 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:23:04 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:23:04 INFO][39m Experiment looks valid
+[36m[2018-09-05 17:23:04 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:23:04 DEBUG][39m Building activity cache...
+[36m[2018-09-05 17:23:04 DEBUG][39m Cached 3 activities
+[32m[2018-09-05 17:23:04 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-05 17:23:04 DEBUG][39m Loading configuration...
+[36m[2018-09-05 17:23:04 DEBUG][39m Loading secrets...
+[36m[2018-09-05 17:23:04 DEBUG][39m Secrets loaded
+[32m[2018-09-05 17:23:04 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 17:23:04 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 17:23:04 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 17:23:04 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 17:23:04 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 17:23:04 INFO][39m Action: delete_all_toxics
+[36m[2018-09-05 17:23:04 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-05 17:23:04 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-05 17:23:04 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:23:04 INFO][39m Pausing before next activity for 18s...
+[32m[2018-09-05 17:23:22 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-05 17:23:22 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 500}'
+[36m[2018-09-05 17:23:22 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-05 17:23:22 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:23:22 INFO][39m Pausing after activity for 2s...
+[32m[2018-09-05 17:23:24 INFO][39m Action: delete_all_toxics
+[36m[2018-09-05 17:23:24 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-05 17:23:24 DEBUG][39m Found toxic latency_downstream
+[36m[2018-09-05 17:23:24 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-05 17:23:24 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-05 17:23:24 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-05 17:23:24 INFO][39m Probe: proxy-is-found
+[36m[2018-09-05 17:23:24 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-05 17:23:24 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-05 17:23:24 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-05 17:23:24 INFO][39m Let's rollback...
+[32m[2018-09-05 17:23:24 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-05 17:23:24 INFO][39m Experiment ended with status: completed
+[36m[2018-09-05 17:23:24 DEBUG][39m Clearing activities cache
+[36m[2018-09-05 17:23:24 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-05 17:23:24 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-06 10:34:44 DEBUG][39m ###############################################################################
+[36m[2018-09-06 10:34:44 DEBUG][39m Running command 'run'
+[36m[2018-09-06 10:34:44 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-06 10:34:44 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 10:34:44 DEBUG][39m Building activity cache...
+[36m[2018-09-06 10:34:44 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 10:34:44 INFO][39m Validating the experiment's syntax
+[36m[2018-09-06 10:34:44 DEBUG][39m Loading configuration...
+[36m[2018-09-06 10:34:44 DEBUG][39m Loading secrets...
+[36m[2018-09-06 10:34:44 DEBUG][39m Secrets loaded
+[32m[2018-09-06 10:34:44 INFO][39m Experiment looks valid
+[36m[2018-09-06 10:34:44 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 10:34:44 DEBUG][39m Building activity cache...
+[36m[2018-09-06 10:34:44 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 10:34:44 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-06 10:34:44 DEBUG][39m Loading configuration...
+[36m[2018-09-06 10:34:44 DEBUG][39m Loading secrets...
+[36m[2018-09-06 10:34:44 DEBUG][39m Secrets loaded
+[32m[2018-09-06 10:34:44 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 10:34:45 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 10:34:45 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 10:34:45 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 10:34:45 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 10:34:45 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 10:34:45 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 10:34:45 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 10:34:45 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 10:34:45 INFO][39m Pausing before next activity for 18s...
+[32m[2018-09-06 10:35:03 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-06 10:35:03 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 500}'
+[36m[2018-09-06 10:35:03 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-06 10:35:03 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 10:35:03 INFO][39m Pausing after activity for 2s...
+[32m[2018-09-06 10:35:05 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 10:35:05 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 10:35:05 DEBUG][39m Found toxic latency_upstream
+[36m[2018-09-06 10:35:05 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 10:35:05 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 10:35:05 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 10:35:05 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 10:35:05 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 10:35:05 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 10:35:05 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 10:35:05 INFO][39m Let's rollback...
+[32m[2018-09-06 10:35:05 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-06 10:35:05 INFO][39m Experiment ended with status: completed
+[36m[2018-09-06 10:35:05 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 10:35:05 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 10:35:05 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-06 10:36:17 DEBUG][39m ###############################################################################
+[36m[2018-09-06 10:36:17 DEBUG][39m Running command 'run'
+[36m[2018-09-06 10:36:17 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-06 10:36:17 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 10:36:17 DEBUG][39m Building activity cache...
+[36m[2018-09-06 10:36:17 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 10:36:17 INFO][39m Validating the experiment's syntax
+[36m[2018-09-06 10:36:17 DEBUG][39m Loading configuration...
+[36m[2018-09-06 10:36:17 DEBUG][39m Loading secrets...
+[36m[2018-09-06 10:36:17 DEBUG][39m Secrets loaded
+[32m[2018-09-06 10:36:17 INFO][39m Experiment looks valid
+[36m[2018-09-06 10:36:17 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 10:36:17 DEBUG][39m Building activity cache...
+[36m[2018-09-06 10:36:17 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 10:36:17 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-06 10:36:17 DEBUG][39m Loading configuration...
+[36m[2018-09-06 10:36:17 DEBUG][39m Loading secrets...
+[36m[2018-09-06 10:36:17 DEBUG][39m Secrets loaded
+[32m[2018-09-06 10:36:17 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 10:36:17 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 10:36:17 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 10:36:17 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 10:36:17 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 10:36:17 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 10:36:17 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 10:36:17 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 10:36:17 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 10:36:17 INFO][39m Pausing before next activity for 18s...
+[32m[2018-09-06 10:36:35 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-06 10:36:35 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 500}'
+[36m[2018-09-06 10:36:35 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-06 10:36:35 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 10:36:35 INFO][39m Pausing after activity for 2s...
+[32m[2018-09-06 10:36:37 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 10:36:37 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 10:36:37 DEBUG][39m Found toxic latency_upstream
+[36m[2018-09-06 10:36:37 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 10:36:37 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 10:36:37 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 10:36:37 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 10:36:37 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 10:36:37 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 10:36:37 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 10:36:37 INFO][39m Let's rollback...
+[32m[2018-09-06 10:36:37 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-06 10:36:37 INFO][39m Experiment ended with status: completed
+[36m[2018-09-06 10:36:37 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 10:36:37 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 10:36:37 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-06 10:38:52 DEBUG][39m ###############################################################################
+[36m[2018-09-06 10:38:52 DEBUG][39m Running command 'run'
+[36m[2018-09-06 10:38:52 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-06 10:38:52 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 10:38:52 DEBUG][39m Building activity cache...
+[36m[2018-09-06 10:38:52 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 10:38:52 INFO][39m Validating the experiment's syntax
+[36m[2018-09-06 10:38:52 DEBUG][39m Loading configuration...
+[36m[2018-09-06 10:38:52 DEBUG][39m Loading secrets...
+[36m[2018-09-06 10:38:52 DEBUG][39m Secrets loaded
+[32m[2018-09-06 10:38:52 INFO][39m Experiment looks valid
+[36m[2018-09-06 10:38:52 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 10:38:52 DEBUG][39m Building activity cache...
+[36m[2018-09-06 10:38:52 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 10:38:52 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-06 10:38:52 DEBUG][39m Loading configuration...
+[36m[2018-09-06 10:38:52 DEBUG][39m Loading secrets...
+[36m[2018-09-06 10:38:52 DEBUG][39m Secrets loaded
+[32m[2018-09-06 10:38:52 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 10:38:52 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 10:38:52 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 10:38:52 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 10:38:52 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 10:38:52 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 10:38:52 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 10:38:52 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 10:38:52 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 10:38:52 INFO][39m Pausing before next activity for 18s...
+[32m[2018-09-06 10:39:10 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-06 10:39:10 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 500}'
+[36m[2018-09-06 10:39:10 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-06 10:39:10 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 10:39:10 INFO][39m Pausing after activity for 2s...
+[32m[2018-09-06 10:39:12 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 10:39:12 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 10:39:12 DEBUG][39m Found toxic latency_upstream
+[36m[2018-09-06 10:39:12 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 10:39:12 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 10:39:12 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 10:39:12 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 10:39:12 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 10:39:12 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 10:39:12 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 10:39:12 INFO][39m Let's rollback...
+[32m[2018-09-06 10:39:12 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-06 10:39:12 INFO][39m Experiment ended with status: completed
+[36m[2018-09-06 10:39:12 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 10:39:12 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 10:39:12 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-06 10:40:45 DEBUG][39m ###############################################################################
+[36m[2018-09-06 10:40:45 DEBUG][39m Running command 'run'
+[36m[2018-09-06 10:40:45 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-06 10:40:45 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 10:40:45 DEBUG][39m Building activity cache...
+[36m[2018-09-06 10:40:45 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 10:40:45 INFO][39m Validating the experiment's syntax
+[36m[2018-09-06 10:40:45 DEBUG][39m Loading configuration...
+[36m[2018-09-06 10:40:45 DEBUG][39m Loading secrets...
+[36m[2018-09-06 10:40:45 DEBUG][39m Secrets loaded
+[32m[2018-09-06 10:40:45 INFO][39m Experiment looks valid
+[36m[2018-09-06 10:40:45 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 10:40:45 DEBUG][39m Building activity cache...
+[36m[2018-09-06 10:40:45 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 10:40:45 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-06 10:40:45 DEBUG][39m Loading configuration...
+[36m[2018-09-06 10:40:45 DEBUG][39m Loading secrets...
+[36m[2018-09-06 10:40:45 DEBUG][39m Secrets loaded
+[32m[2018-09-06 10:40:45 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 10:40:45 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 10:40:45 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 10:40:45 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 10:40:45 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 10:40:45 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 10:40:45 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 10:40:45 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 10:40:45 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 10:40:45 INFO][39m Pausing before next activity for 10s...
+[32m[2018-09-06 10:40:55 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-06 10:40:55 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 100}'
+[36m[2018-09-06 10:40:55 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-06 10:40:55 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 10:40:55 INFO][39m Pausing after activity for 40s...
+[32m[2018-09-06 10:41:35 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 10:41:35 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 10:41:35 DEBUG][39m Found toxic latency_upstream
+[36m[2018-09-06 10:41:35 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 10:41:35 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 10:41:35 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 10:41:35 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 10:41:35 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 10:41:35 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 10:41:35 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 10:41:35 INFO][39m Let's rollback...
+[32m[2018-09-06 10:41:35 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-06 10:41:35 INFO][39m Experiment ended with status: completed
+[36m[2018-09-06 10:41:35 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 10:41:35 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 10:41:35 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-06 14:31:01 DEBUG][39m ###############################################################################
+[36m[2018-09-06 14:31:01 DEBUG][39m Running command 'run'
+[36m[2018-09-06 14:31:01 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-06 14:31:01 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 14:31:01 DEBUG][39m Building activity cache...
+[36m[2018-09-06 14:31:01 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 14:31:01 INFO][39m Validating the experiment's syntax
+[36m[2018-09-06 14:31:01 DEBUG][39m Loading configuration...
+[36m[2018-09-06 14:31:01 DEBUG][39m Loading secrets...
+[36m[2018-09-06 14:31:01 DEBUG][39m Secrets loaded
+[32m[2018-09-06 14:31:01 INFO][39m Experiment looks valid
+[36m[2018-09-06 14:31:01 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 14:31:01 DEBUG][39m Building activity cache...
+[36m[2018-09-06 14:31:01 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 14:31:01 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-06 14:31:01 DEBUG][39m Loading configuration...
+[36m[2018-09-06 14:31:01 DEBUG][39m Loading secrets...
+[36m[2018-09-06 14:31:01 DEBUG][39m Secrets loaded
+[32m[2018-09-06 14:31:01 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 14:31:01 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 14:31:01 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 14:31:01 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 14:31:01 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 14:31:01 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 14:31:01 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 14:31:01 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 14:31:01 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 14:31:01 INFO][39m Pausing before next activity for 10s...
+[32m[2018-09-06 14:31:11 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-06 14:31:11 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 100}'
+[36m[2018-09-06 14:31:11 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-06 14:31:11 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 14:31:11 INFO][39m Pausing after activity for 40s...
+[32m[2018-09-06 14:31:51 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 14:31:51 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 14:31:51 DEBUG][39m Found toxic latency_upstream
+[36m[2018-09-06 14:31:51 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 14:31:51 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 14:31:51 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 14:31:51 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 14:31:51 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 14:31:51 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 14:31:51 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 14:31:51 INFO][39m Let's rollback...
+[32m[2018-09-06 14:31:51 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-06 14:31:51 INFO][39m Experiment ended with status: completed
+[36m[2018-09-06 14:31:51 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 14:31:51 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 14:31:51 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-06 18:10:58 DEBUG][39m ###############################################################################
+[36m[2018-09-06 18:10:58 DEBUG][39m Running command 'run'
+[36m[2018-09-06 18:10:58 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-06 18:10:58 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 18:10:58 DEBUG][39m Building activity cache...
+[36m[2018-09-06 18:10:58 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 18:10:58 INFO][39m Validating the experiment's syntax
+[36m[2018-09-06 18:10:58 DEBUG][39m Loading configuration...
+[36m[2018-09-06 18:10:58 DEBUG][39m Loading secrets...
+[36m[2018-09-06 18:10:58 DEBUG][39m Secrets loaded
+[32m[2018-09-06 18:10:58 INFO][39m Experiment looks valid
+[36m[2018-09-06 18:10:58 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 18:10:58 DEBUG][39m Building activity cache...
+[36m[2018-09-06 18:10:58 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 18:10:58 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-06 18:10:58 DEBUG][39m Loading configuration...
+[36m[2018-09-06 18:10:58 DEBUG][39m Loading secrets...
+[36m[2018-09-06 18:10:58 DEBUG][39m Secrets loaded
+[32m[2018-09-06 18:10:58 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 18:10:58 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 18:10:58 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 18:10:58 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 18:10:58 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 18:10:58 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 18:10:58 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 18:10:58 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 18:10:58 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:10:58 INFO][39m Pausing before next activity for 10s...
+[32m[2018-09-06 18:11:08 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-06 18:11:08 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 300}'
+[36m[2018-09-06 18:11:08 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-06 18:11:08 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:11:08 INFO][39m Pausing after activity for 30s...
+[32m[2018-09-06 18:11:38 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 18:11:38 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 18:11:38 DEBUG][39m Found toxic latency_downstream
+[36m[2018-09-06 18:11:38 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 18:11:38 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:11:38 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 18:11:38 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 18:11:38 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 18:11:38 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 18:11:38 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 18:11:38 INFO][39m Let's rollback...
+[32m[2018-09-06 18:11:38 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-06 18:11:38 INFO][39m Experiment ended with status: completed
+[36m[2018-09-06 18:11:38 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 18:11:38 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 18:11:38 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-06 18:16:20 DEBUG][39m ###############################################################################
+[36m[2018-09-06 18:16:20 DEBUG][39m Running command 'run'
+[36m[2018-09-06 18:16:20 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-06 18:16:20 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 18:16:20 DEBUG][39m Building activity cache...
+[36m[2018-09-06 18:16:20 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 18:16:20 INFO][39m Validating the experiment's syntax
+[36m[2018-09-06 18:16:20 DEBUG][39m Loading configuration...
+[36m[2018-09-06 18:16:20 DEBUG][39m Loading secrets...
+[36m[2018-09-06 18:16:20 DEBUG][39m Secrets loaded
+[32m[2018-09-06 18:16:20 INFO][39m Experiment looks valid
+[36m[2018-09-06 18:16:20 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 18:16:20 DEBUG][39m Building activity cache...
+[36m[2018-09-06 18:16:20 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 18:16:20 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-06 18:16:20 DEBUG][39m Loading configuration...
+[36m[2018-09-06 18:16:20 DEBUG][39m Loading secrets...
+[36m[2018-09-06 18:16:20 DEBUG][39m Secrets loaded
+[32m[2018-09-06 18:16:20 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 18:16:20 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 18:16:20 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 18:16:20 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 18:16:20 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 18:16:20 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 18:16:20 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 18:16:20 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 18:16:20 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:16:20 INFO][39m Pausing before next activity for 10s...
+[32m[2018-09-06 18:16:30 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-06 18:16:30 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 300}'
+[36m[2018-09-06 18:16:30 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-06 18:16:30 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:16:30 INFO][39m Pausing after activity for 30s...
+[32m[2018-09-06 18:17:00 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 18:17:00 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 18:17:00 DEBUG][39m Found toxic latency_downstream
+[36m[2018-09-06 18:17:00 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 18:17:00 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:17:00 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 18:17:00 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 18:17:00 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 18:17:00 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 18:17:00 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 18:17:00 INFO][39m Let's rollback...
+[32m[2018-09-06 18:17:00 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-06 18:17:00 INFO][39m Experiment ended with status: completed
+[36m[2018-09-06 18:17:00 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 18:17:00 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 18:17:00 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-06 18:18:57 DEBUG][39m ###############################################################################
+[36m[2018-09-06 18:18:57 DEBUG][39m Running command 'run'
+[36m[2018-09-06 18:18:57 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-06 18:18:57 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 18:18:57 DEBUG][39m Building activity cache...
+[36m[2018-09-06 18:18:57 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 18:18:57 INFO][39m Validating the experiment's syntax
+[36m[2018-09-06 18:18:57 DEBUG][39m Loading configuration...
+[36m[2018-09-06 18:18:57 DEBUG][39m Loading secrets...
+[36m[2018-09-06 18:18:57 DEBUG][39m Secrets loaded
+[32m[2018-09-06 18:18:57 INFO][39m Experiment looks valid
+[36m[2018-09-06 18:18:57 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 18:18:57 DEBUG][39m Building activity cache...
+[36m[2018-09-06 18:18:57 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 18:18:57 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-06 18:18:57 DEBUG][39m Loading configuration...
+[36m[2018-09-06 18:18:57 DEBUG][39m Loading secrets...
+[36m[2018-09-06 18:18:57 DEBUG][39m Secrets loaded
+[32m[2018-09-06 18:18:57 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 18:18:57 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 18:18:57 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 18:18:57 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 18:18:57 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 18:18:57 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 18:18:57 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 18:18:57 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 18:18:57 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:18:57 INFO][39m Pausing before next activity for 10s...
+[32m[2018-09-06 18:19:07 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-06 18:19:07 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 200}'
+[36m[2018-09-06 18:19:07 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-06 18:19:07 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:19:07 INFO][39m Pausing after activity for 30s...
+[32m[2018-09-06 18:19:37 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 18:19:37 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 18:19:37 DEBUG][39m Found toxic latency_downstream
+[36m[2018-09-06 18:19:37 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 18:19:37 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:19:37 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 18:19:37 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 18:19:37 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 18:19:37 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 18:19:37 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 18:19:37 INFO][39m Let's rollback...
+[32m[2018-09-06 18:19:37 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-06 18:19:37 INFO][39m Experiment ended with status: completed
+[36m[2018-09-06 18:19:37 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 18:19:37 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 18:19:37 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-06 18:22:36 DEBUG][39m ###############################################################################
+[36m[2018-09-06 18:22:36 DEBUG][39m Running command 'run'
+[36m[2018-09-06 18:22:36 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-06 18:22:36 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 18:22:36 DEBUG][39m Building activity cache...
+[36m[2018-09-06 18:22:36 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 18:22:36 INFO][39m Validating the experiment's syntax
+[36m[2018-09-06 18:22:36 DEBUG][39m Loading configuration...
+[36m[2018-09-06 18:22:36 DEBUG][39m Loading secrets...
+[36m[2018-09-06 18:22:36 DEBUG][39m Secrets loaded
+[32m[2018-09-06 18:22:36 INFO][39m Experiment looks valid
+[36m[2018-09-06 18:22:36 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 18:22:36 DEBUG][39m Building activity cache...
+[36m[2018-09-06 18:22:36 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 18:22:36 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-06 18:22:36 DEBUG][39m Loading configuration...
+[36m[2018-09-06 18:22:36 DEBUG][39m Loading secrets...
+[36m[2018-09-06 18:22:36 DEBUG][39m Secrets loaded
+[32m[2018-09-06 18:22:36 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 18:22:36 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 18:22:36 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 18:22:36 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 18:22:36 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 18:22:36 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 18:22:36 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 18:22:36 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 18:22:36 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:22:36 INFO][39m Pausing before next activity for 10s...
+[32m[2018-09-06 18:22:46 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-06 18:22:46 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 200}'
+[36m[2018-09-06 18:22:46 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-06 18:22:46 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:22:46 INFO][39m Pausing after activity for 30s...
+[32m[2018-09-06 18:23:16 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 18:23:16 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 18:23:16 DEBUG][39m Found toxic latency_downstream
+[36m[2018-09-06 18:23:16 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 18:23:16 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:23:16 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 18:23:16 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 18:23:16 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 18:23:16 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 18:23:16 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 18:23:16 INFO][39m Let's rollback...
+[32m[2018-09-06 18:23:16 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-06 18:23:16 INFO][39m Experiment ended with status: completed
+[36m[2018-09-06 18:23:16 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 18:23:16 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 18:23:16 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-06 18:25:42 DEBUG][39m ###############################################################################
+[36m[2018-09-06 18:25:42 DEBUG][39m Running command 'run'
+[36m[2018-09-06 18:25:42 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-06 18:25:42 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 18:25:42 DEBUG][39m Building activity cache...
+[36m[2018-09-06 18:25:42 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 18:25:42 INFO][39m Validating the experiment's syntax
+[36m[2018-09-06 18:25:42 DEBUG][39m Loading configuration...
+[36m[2018-09-06 18:25:42 DEBUG][39m Loading secrets...
+[36m[2018-09-06 18:25:42 DEBUG][39m Secrets loaded
+[32m[2018-09-06 18:25:42 INFO][39m Experiment looks valid
+[36m[2018-09-06 18:25:42 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 18:25:42 DEBUG][39m Building activity cache...
+[36m[2018-09-06 18:25:42 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 18:25:42 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-06 18:25:42 DEBUG][39m Loading configuration...
+[36m[2018-09-06 18:25:42 DEBUG][39m Loading secrets...
+[36m[2018-09-06 18:25:42 DEBUG][39m Secrets loaded
+[32m[2018-09-06 18:25:42 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 18:25:42 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 18:25:42 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 18:25:42 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 18:25:42 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 18:25:42 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 18:25:42 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 18:25:42 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 18:25:42 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:25:42 INFO][39m Pausing before next activity for 10s...
+[32m[2018-09-06 18:25:52 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-06 18:25:52 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 100}'
+[36m[2018-09-06 18:25:52 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-06 18:25:52 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:25:52 INFO][39m Pausing after activity for 30s...
+[32m[2018-09-06 18:26:22 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 18:26:22 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 18:26:22 DEBUG][39m Found toxic latency_downstream
+[36m[2018-09-06 18:26:22 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 18:26:22 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:26:22 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 18:26:22 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 18:26:22 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 18:26:22 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 18:26:22 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 18:26:22 INFO][39m Let's rollback...
+[32m[2018-09-06 18:26:22 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-06 18:26:22 INFO][39m Experiment ended with status: completed
+[36m[2018-09-06 18:26:22 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 18:26:22 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 18:26:22 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-06 18:28:07 DEBUG][39m ###############################################################################
+[36m[2018-09-06 18:28:07 DEBUG][39m Running command 'run'
+[36m[2018-09-06 18:28:07 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-06 18:28:08 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 18:28:08 DEBUG][39m Building activity cache...
+[36m[2018-09-06 18:28:08 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 18:28:08 INFO][39m Validating the experiment's syntax
+[36m[2018-09-06 18:28:08 DEBUG][39m Loading configuration...
+[36m[2018-09-06 18:28:08 DEBUG][39m Loading secrets...
+[36m[2018-09-06 18:28:08 DEBUG][39m Secrets loaded
+[32m[2018-09-06 18:28:08 INFO][39m Experiment looks valid
+[36m[2018-09-06 18:28:08 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 18:28:08 DEBUG][39m Building activity cache...
+[36m[2018-09-06 18:28:08 DEBUG][39m Cached 3 activities
+[32m[2018-09-06 18:28:08 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-06 18:28:08 DEBUG][39m Loading configuration...
+[36m[2018-09-06 18:28:08 DEBUG][39m Loading secrets...
+[36m[2018-09-06 18:28:08 DEBUG][39m Secrets loaded
+[32m[2018-09-06 18:28:08 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 18:28:08 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 18:28:08 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 18:28:08 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 18:28:08 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 18:28:08 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 18:28:08 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 18:28:08 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 18:28:08 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:28:08 INFO][39m Pausing before next activity for 10s...
+[32m[2018-09-06 18:28:18 INFO][39m Action: add-a-latency-toxic
+[36m[2018-09-06 18:28:18 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 50}'
+[36m[2018-09-06 18:28:18 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-06 18:28:18 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:28:18 INFO][39m Pausing after activity for 30s...
+[32m[2018-09-06 18:28:48 INFO][39m Action: delete_all_toxics
+[36m[2018-09-06 18:28:48 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-06 18:28:48 DEBUG][39m Found toxic latency_downstream
+[36m[2018-09-06 18:28:48 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-06 18:28:48 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-06 18:28:48 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-06 18:28:48 INFO][39m Probe: proxy-is-found
+[36m[2018-09-06 18:28:48 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-06 18:28:48 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-06 18:28:48 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-06 18:28:48 INFO][39m Let's rollback...
+[32m[2018-09-06 18:28:48 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-06 18:28:48 INFO][39m Experiment ended with status: completed
+[36m[2018-09-06 18:28:48 DEBUG][39m Clearing activities cache
+[36m[2018-09-06 18:28:48 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-06 18:28:48 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-07 12:09:23 DEBUG][39m ###############################################################################
+[36m[2018-09-07 12:09:23 DEBUG][39m Running command 'run'
+[36m[2018-09-07 12:09:23 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-07 12:09:23 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-07 12:09:23 DEBUG][39m Building activity cache...
+[36m[2018-09-07 12:09:23 DEBUG][39m Cached 4 activities
+[32m[2018-09-07 12:09:23 INFO][39m Validating the experiment's syntax
+[36m[2018-09-07 12:09:23 DEBUG][39m Loading configuration...
+[36m[2018-09-07 12:09:23 DEBUG][39m Loading secrets...
+[36m[2018-09-07 12:09:23 DEBUG][39m Secrets loaded
+[32m[2018-09-07 12:09:23 INFO][39m Experiment looks valid
+[36m[2018-09-07 12:09:23 DEBUG][39m Clearing activities cache
+[36m[2018-09-07 12:09:23 DEBUG][39m Building activity cache...
+[36m[2018-09-07 12:09:23 DEBUG][39m Cached 4 activities
+[32m[2018-09-07 12:09:23 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-07 12:09:23 DEBUG][39m Loading configuration...
+[36m[2018-09-07 12:09:23 DEBUG][39m Loading secrets...
+[36m[2018-09-07 12:09:23 DEBUG][39m Secrets loaded
+[32m[2018-09-07 12:09:24 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-07 12:09:24 INFO][39m Probe: proxy-is-found
+[36m[2018-09-07 12:09:24 DEBUG][39m   => succeeded without any result value
+[36m[2018-09-07 12:09:24 DEBUG][39m allowed tolerance is c1
+[2018-09-07 12:09:24 CRITICAL] Steady state probe 'proxy-is-found' is not in the given tolerance so failing this experiment
+[32m[2018-09-07 12:09:24 INFO][39m Let's rollback...
+[32m[2018-09-07 12:09:24 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-07 12:09:24 INFO][39m Experiment ended with status: failed
+[36m[2018-09-07 12:09:24 DEBUG][39m Clearing activities cache
+[36m[2018-09-07 12:09:24 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-07 12:09:24 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-07 12:10:32 DEBUG][39m ###############################################################################
+[36m[2018-09-07 12:10:32 DEBUG][39m Running command 'run'
+[36m[2018-09-07 12:10:32 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-07 12:10:33 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-07 12:10:33 DEBUG][39m Building activity cache...
+[36m[2018-09-07 12:10:33 DEBUG][39m Cached 4 activities
+[32m[2018-09-07 12:10:33 INFO][39m Validating the experiment's syntax
+[36m[2018-09-07 12:10:33 DEBUG][39m Loading configuration...
+[36m[2018-09-07 12:10:33 DEBUG][39m Loading secrets...
+[36m[2018-09-07 12:10:33 DEBUG][39m Secrets loaded
+[32m[2018-09-07 12:10:33 INFO][39m Experiment looks valid
+[36m[2018-09-07 12:10:33 DEBUG][39m Clearing activities cache
+[36m[2018-09-07 12:10:33 DEBUG][39m Building activity cache...
+[36m[2018-09-07 12:10:33 DEBUG][39m Cached 4 activities
+[32m[2018-09-07 12:10:33 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-07 12:10:33 DEBUG][39m Loading configuration...
+[36m[2018-09-07 12:10:33 DEBUG][39m Loading secrets...
+[36m[2018-09-07 12:10:33 DEBUG][39m Secrets loaded
+[32m[2018-09-07 12:10:33 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-07 12:10:33 INFO][39m Probe: proxy-is-found
+[36m[2018-09-07 12:10:33 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-07 12:10:33 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-07 12:10:33 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-07 12:10:33 INFO][39m Action: delete_all_toxics
+[36m[2018-09-07 12:10:33 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-07 12:10:33 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-07 12:10:33 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-07 12:10:33 INFO][39m Pausing before next activity for 10s...
+[32m[2018-09-07 12:10:43 INFO][39m Action: 200ms latency
+[36m[2018-09-07 12:10:43 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 200}'
+[36m[2018-09-07 12:10:43 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-07 12:10:43 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-07 12:10:43 INFO][39m Pausing after activity for 10s...
+[32m[2018-09-07 12:10:53 INFO][39m Pausing before next activity for 10s...
+[32m[2018-09-07 12:11:03 INFO][39m Action: 400ms latency
+[36m[2018-09-07 12:11:03 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 400}'
+[36m[2018-09-07 12:11:03 DEBUG][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaostoolkit_toxiproxy-0.0.1-py3.6.egg/chaostp/proxy/actions.py", line 71, in add_toxic
+        proxy.add_toxic(type=type, stream=stream, attributes=attributes)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/proxy.py", line 71, in add_toxic
+        APIConsumer.post("/proxies/%s/toxics" % self.name, json=json).json()
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/api.py", line 35, in post
+        return validate_response(requests.post(url=endpoint, data=data, json=json, **kwargs))
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/api.py", line 47, in validate_response
+        raise_with_traceback(ProxyExists(content))
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/future/utils/__init__.py", line 419, in raise_with_traceback
+        raise exc.with_traceback(traceback)
+    toxiproxy.exceptions.ProxyExists: b'{"error":"toxic already exists","status":409}\n'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/activity.py", line 218, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        sys.exc_info()[2])
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaoslib/provider/python.py", line 50, in run_python_activity
+        return func(**arguments)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/chaostoolkit_toxiproxy-0.0.1-py3.6.egg/chaostp/proxy/actions.py", line 71, in add_toxic
+        proxy.add_toxic(type=type, stream=stream, attributes=attributes)
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/proxy.py", line 71, in add_toxic
+        APIConsumer.post("/proxies/%s/toxics" % self.name, json=json).json()
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/api.py", line 35, in post
+        return validate_response(requests.post(url=endpoint, data=data, json=json, **kwargs))
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/toxiproxy-0.1.0-py3.6.egg/toxiproxy/api.py", line 47, in validate_response
+        raise_with_traceback(ProxyExists(content))
+      File "/Users/mmi59/virtualenvironment/Pandamonium/lib/python3.6/site-packages/future/utils/__init__.py", line 419, in raise_with_traceback
+        raise exc.with_traceback(traceback)
+    chaoslib.exceptions.ActivityFailed: toxiproxy.exceptions.ProxyExists: b'{"error":"toxic already exists","status":409}\n'
+[31m[2018-09-07 12:11:03 ERROR][39m   => failed: toxiproxy.exceptions.ProxyExists: b'{"error":"toxic already exists","status":409}\n'
+[32m[2018-09-07 12:11:03 INFO][39m Pausing after activity for 10s...
+[32m[2018-09-07 12:11:13 INFO][39m Action: delete_all_toxics
+[36m[2018-09-07 12:11:13 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-07 12:11:13 DEBUG][39m Found toxic latency_downstream
+[36m[2018-09-07 12:11:13 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-07 12:11:13 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-07 12:11:13 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-07 12:11:13 INFO][39m Probe: proxy-is-found
+[36m[2018-09-07 12:11:13 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-07 12:11:13 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-07 12:11:13 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-07 12:11:13 INFO][39m Let's rollback...
+[32m[2018-09-07 12:11:13 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-07 12:11:13 INFO][39m Experiment ended with status: completed
+[36m[2018-09-07 12:11:13 DEBUG][39m Clearing activities cache
+[36m[2018-09-07 12:11:13 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-07 12:11:13 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
+[36m[2018-09-07 12:15:41 DEBUG][39m ###############################################################################
+[36m[2018-09-07 12:15:41 DEBUG][39m Running command 'run'
+[36m[2018-09-07 12:15:41 DEBUG][39m Using settings file '/Users/mmi59/.chaostoolkit/settings.yaml'
+[36m[2018-09-07 12:15:41 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-07 12:15:41 DEBUG][39m Building activity cache...
+[36m[2018-09-07 12:15:41 DEBUG][39m Cached 4 activities
+[32m[2018-09-07 12:15:41 INFO][39m Validating the experiment's syntax
+[36m[2018-09-07 12:15:41 DEBUG][39m Loading configuration...
+[36m[2018-09-07 12:15:41 DEBUG][39m Loading secrets...
+[36m[2018-09-07 12:15:41 DEBUG][39m Secrets loaded
+[32m[2018-09-07 12:15:41 INFO][39m Experiment looks valid
+[36m[2018-09-07 12:15:41 DEBUG][39m Clearing activities cache
+[36m[2018-09-07 12:15:41 DEBUG][39m Building activity cache...
+[36m[2018-09-07 12:15:41 DEBUG][39m Cached 4 activities
+[32m[2018-09-07 12:15:41 INFO][39m Running experiment: What happens if a latency is introduced on a proxy for cassandra
+[36m[2018-09-07 12:15:41 DEBUG][39m Loading configuration...
+[36m[2018-09-07 12:15:41 DEBUG][39m Loading secrets...
+[36m[2018-09-07 12:15:41 DEBUG][39m Secrets loaded
+[32m[2018-09-07 12:15:41 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-07 12:15:41 INFO][39m Probe: proxy-is-found
+[36m[2018-09-07 12:15:41 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-07 12:15:41 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-07 12:15:41 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-07 12:15:41 INFO][39m Action: delete_all_toxics
+[36m[2018-09-07 12:15:41 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-07 12:15:41 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-07 12:15:41 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-07 12:15:41 INFO][39m Pausing before next activity for 10s...
+[32m[2018-09-07 12:15:51 INFO][39m Action: 200ms latency
+[36m[2018-09-07 12:15:51 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 200}'
+[36m[2018-09-07 12:15:51 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-07 12:15:51 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-07 12:15:51 INFO][39m Pausing after activity for 10s...
+[32m[2018-09-07 12:16:01 INFO][39m Action: delete_all_toxics
+[36m[2018-09-07 12:16:01 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-07 12:16:01 DEBUG][39m Found toxic latency_downstream
+[36m[2018-09-07 12:16:01 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-07 12:16:01 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-07 12:16:01 INFO][39m Pausing before next activity for 10s...
+[32m[2018-09-07 12:16:11 INFO][39m Action: 400ms latency
+[36m[2018-09-07 12:16:11 DEBUG][39m add_toxic: Proxy: 'c1',
+    Toxic 
+    	 type 'latency', 
+    	 attributes: '{'latency': 400}'
+[36m[2018-09-07 12:16:11 DEBUG][39m add_toxic: Toxic added
+[36m[2018-09-07 12:16:11 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-07 12:16:11 INFO][39m Pausing after activity for 10s...
+[32m[2018-09-07 12:16:21 INFO][39m Action: delete_all_toxics
+[36m[2018-09-07 12:16:21 DEBUG][39m delete_all_toxic: Proxy: 'c1'
+[36m[2018-09-07 12:16:21 DEBUG][39m Found toxic latency_downstream
+[36m[2018-09-07 12:16:21 DEBUG][39m delete_all_toxics: All toxics deleted
+[36m[2018-09-07 12:16:21 DEBUG][39m   => succeeded with '1'
+[32m[2018-09-07 12:16:21 INFO][39m Steady state hypothesis: Proxy is found
+[32m[2018-09-07 12:16:21 INFO][39m Probe: proxy-is-found
+[36m[2018-09-07 12:16:21 DEBUG][39m   => succeeded with 'c1'
+[36m[2018-09-07 12:16:21 DEBUG][39m allowed tolerance is c1
+[32m[2018-09-07 12:16:21 INFO][39m Steady state hypothesis is met!
+[32m[2018-09-07 12:16:21 INFO][39m Let's rollback...
+[32m[2018-09-07 12:16:21 INFO][39m No declared rollbacks, let's move on.
+[32m[2018-09-07 12:16:21 INFO][39m Experiment ended with status: completed
+[36m[2018-09-07 12:16:21 DEBUG][39m Clearing activities cache
+[36m[2018-09-07 12:16:21 DEBUG][39m The Chaos Toolkit settings file could not be found at '/Users/mmi59/.chaostoolkit/settings.yaml'.
+[36m[2018-09-07 12:16:21 DEBUG][39m No Chaos Hub configured. Please execute `chaos login` before attempting to publish.
