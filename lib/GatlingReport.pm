@@ -3,6 +3,9 @@ package GatlingReport;
 use Moose;
 use HTML::TreeBuilder 5 -weak; # Ensure weak references in use
 use Log::Log4perl;
+use JSON::Syck qw( LoadFile );
+
+use GatlingReport::GraphData;
 
 =head1 NAME
 
@@ -114,7 +117,6 @@ sub dump_report {
 
 $ct_journal : the chaostoolkit journal file
 
-
 =head3 OUTPUT
 
 1 or die in case of errors
@@ -123,7 +125,6 @@ $ct_journal : the chaostoolkit journal file
 
 Workflow:
 * take the CT journal file as input
-* opens and parses the report html index file
 * parses the CT journal:
 * for each action in the run section: 
 *     create a new js file that defines a new var with data for that action. 
@@ -141,15 +142,18 @@ sub add_ct_experiment {
     my ( $self, $ct_journal ) = @_;
 
     die "ChaosToolkit journal file not exists or not readable\n"
-        unless -f $ct_journal_filename;
+        unless -f $ct_journal;
     
+        $DB::single=1;
     # read the journal and create a single js file for each action and add it to the report folder.
-    my $ct_journal_data = JSON::Syck::LoadFile($ct_journal_filename);
+    my $ct_journal_data = JSON::Syck->LoadFile($ct_journal);
     
-    # * opens and parses the report html index file
-    my $report_tree = HTML::TreeBuilder->new;
-    $report_tree->parse_file("$report_dir/index.html")
-        or die "Error parsing report html file\n";
+    foreach my $run ( @{$ct_journal_data->{run}} ) {
+        if ( $run->{activity}->{type} eq 'action' && $run->{status} eq 'succeeded' ) {
+
+        }
+
+    }
 }
 
 
