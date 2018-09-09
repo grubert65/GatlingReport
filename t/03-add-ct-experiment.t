@@ -8,6 +8,7 @@ Log::Log4perl->easy_init($DEBUG);
 BEGIN {
     use_ok("GatlingReport");
 }
+
 ok( my $o = GatlingReport->new(
         report_dir  => './data/exp1/gatling-report',
     ), 'new' );

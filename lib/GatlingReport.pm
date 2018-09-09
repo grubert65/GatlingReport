@@ -4,6 +4,7 @@ use Moose;
 use HTML::TreeBuilder 5 -weak; # Ensure weak references in use
 use Log::Log4perl;
 use JSON::Syck qw( LoadFile );
+use Time::ParseDate qw( parsedate );
 
 use GatlingReport::GraphData;
 
@@ -102,7 +103,6 @@ Stores the report in the same report folder, with filename index<$label>.
 sub dump_report {
     my $self = shift;
 
-    $DB::single=1;
     open ( my $fh, ">$self->{report_dir}/index$self->{out_label}.html" );
     print $fh $self->report_tree->as_HTML;
     close $fh;
@@ -146,13 +146,39 @@ sub add_ct_experiment {
     
         $DB::single=1;
     # read the journal and create a single js file for each action and add it to the report folder.
-    my $ct_journal_data = JSON::Syck->LoadFile($ct_journal);
+    my $ct_journal_data = LoadFile($ct_journal);
     
+# * for each action in the run section: 
+    my $action_index=0;
+    my $time_seq;
     foreach my $run ( @{$ct_journal_data->{run}} ) {
         if ( $run->{activity}->{type} eq 'action' && $run->{status} eq 'succeeded' ) {
 
-        }
+# *     create a new graph js file that defines a new var with data for that action. 
+#       the file has to be saved in the js folder
+#       to create the action graph data I need:
+#           - graph time start/end
+#           - action start/end times
+            $DB::single=1;
+            my $graph = GatlingReport::GraphData->new();
+            $time_seq //= $graph->get_time_sequence( $self->report_dir.'/js/all_sessions.js');
+            my $data = $graph->set_on_off_time_sequence( 
+                $time_seq,
+                int ( parsedate( "$run->{start} GMT" ) ),
+                int ( parsedate( "$run->{end} GMT" ) )
+            );
+            my $name = $run->{activity}->{provider}->{func}.'_'.$action_index;
+            $graph->name( $name );
+            $graph->color('#050505');
+            my $out = $graph->process( $data );
 
+            my $graph_filepath = "$self->{report_dir}/js/$name.js";
+            open (my $fh, ">$graph_filepath") or die "Error opening file $graph_filepath:$!\n";
+            print $fh $out;
+            close $fh;
+
+            $action_index++;
+        }
     }
 }
 

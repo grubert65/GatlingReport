@@ -89,6 +89,26 @@ use JSON              qw( decode_json );
 has 'name'  => ( is => 'rw', isa => 'Str', default => 'Test' );
 has 'color' => ( is => 'rw', isa => 'Str', default => '#000000' );
 has 'out_str' =>(is => 'ro', isa => 'Str', lazy => 1, builder => '_set_out_str' );
+has 'template'=>(
+    is  => 'ro',
+    isa => 'Str',
+    lazy    => 1,
+    default => sub {
+        return <<EOT;
+
+[% var_name %] = {
+    color: '[% color %]',
+    name: '[% name %]',
+    data: [ [% FOREACH item IN data %]
+        [ [% item.0 %], [% item.1 %] ],
+    [% END %] ],
+    tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }, 
+    zIndex: 20, 
+    yAxis: 1
+};
+
+EOT
+    });
 
 sub get_varname {
     my $name = shift;
@@ -139,11 +159,59 @@ sub get_time_sequence {
     my @time_seq;
 
     foreach ( @$data ) {
-        push @time_seq, $_->[0];
+        push @time_seq, $_->[0]/1000;
     }
 
-    return @time_seq;
+    return \@time_seq;
 }
+
+
+#=============================================================
+
+=head2 set_on_off_time_sequence
+
+=head3 INPUT
+
+$time_sequence      : an array of times in seconds since the epoch
+$switch_on_time     : start time in seconds since the epoch
+$switch_off_time    : start time in seconds since the epoch
+
+=head3 OUTPUT
+
+An arrayref
+
+=head3 DESCRIPTION
+
+Returns an array of (time, value) pair. Times are as in the 
+passed time sequence, values are 1 in the interval 
+   switch_on_time < time < switch_off_time
+0 anywhere else.
+
+=cut
+
+#=============================================================
+sub set_on_off_time_sequence {
+    my ( $self, $time_sequence, $switch_on_time, $switch_off_time ) = @_;
+
+    die "Switch on time must be smaller that switch off time\n"
+        unless ( $switch_on_time <= $switch_off_time );
+
+    $switch_off_time += 1 if ( $switch_on_time == $switch_off_time );
+
+    my @out;
+    foreach ( @{$time_sequence} ) {
+
+        if ( $_ < $switch_on_time ) {
+            push @out, [ $_ * 1000, 0 ];
+        } elsif ( $_ >= $switch_on_time && $_ <= $switch_off_time ) {
+            push @out, [ $_ * 1000, 1 ];
+        } else {
+            push @out, [ $_ * 1000, 0 ];
+        }
+    }
+    return \@out;
+}
+
 
 sub process {
     my ( $self, $data ) = @_;
@@ -155,11 +223,13 @@ sub process {
         data        => $data
     };
 
+    $DB::single=1;
     my $t = Template->new({
             PRE_CHOMP  => 1,
         }) or die $Template::ERROR, "\n";
     my $out='';
-    $t->process(\*DATA, $params, \$out)
+    my $template = $self->template;
+    $t->process(\$template, $params, \$out)
         or die $Template::ERROR, "\n";
     return $out;
 }

@@ -11,13 +11,11 @@ BEGIN {
 
 ok( my $o = GatlingReport::GraphData->new(), 'new' );
 
-ok( my @time_seq = $o->get_time_sequence( './data/exp1/gatling-report/js/all_sessions.js'), 'get_time_sequence' );
+ok( my $time_seq = $o->get_time_sequence( './data/exp1/gatling-report/js/all_sessions.js'), 'get_time_sequence' );
 
-my $data =  [];
+ok( my $data = $o->set_on_off_time_sequence(
+        $time_seq, 1536318951, 1536318981), 'set_on_off_time_sequence');
 
-foreach ( @time_seq ) {
-    push @$data, [ $_, 0 ];
-}
 
 ok( $o->name('Foo') );
 ok( $o->color('#050505') );
