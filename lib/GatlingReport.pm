@@ -126,6 +126,8 @@ sub dump_report {
             close $fh;
         }
     }
+
+    $self->log->info("Report updated: $filename");
     return 1;
 }
 
