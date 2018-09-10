@@ -207,28 +207,28 @@ sub set_on_off_time_sequence {
     my $self = shift;
     my $params = _get_as_hash( @_ );
 
-    my @time_seq = map{ [ $_, 0 ] } @{$params->{time_sequence}};
+    my @time_seq = @{$params->{time_sequence}};
     $params->{switch_off_time} = $params->{switch_on_time} + $params->{duration};
 
-    push @time_seq, [ $params->{switch_on_time}*1000, 1];
-    push @time_seq, [ $params->{switch_off_time}*1000, 0];
+    $DB::single=1;
+    $params->{switch_on_time}  = int ( $params->{switch_on_time}  * 1000 );
+    $params->{switch_off_time} = int ( $params->{switch_off_time} * 1000 );
+    push @time_seq, $params->{switch_on_time};
+    push @time_seq, $params->{switch_off_time};
 
-    @time_seq = sort { $a->[0] <=> $b->[0] } @time_seq;
+    @time_seq = sort { $a <=> $b } @time_seq;
 
-#     my @out;
-#     foreach ( @{$time_sequence} ) {
-    # 
-#         if ( $_ < $params->{switch_on_time} ) {
-#             push @out, [ $_ * 1000, 0 ];
-#         } elsif ( $_ >= $params->{switch_on_time} && $_ <= $params->{switch_off_time}+1 ) {
-#             push @out, [ $_ * 1000, 1 ];
-#         } else {
-#             push @out, [ $_ * 1000, 0 ];
-#         }
-#     }
-#     return \@out;
-
-    return \@time_seq;
+     my @out;
+     foreach ( @time_seq ) {
+         if ( $_ < $params->{switch_on_time} ) {
+             push @out, [ $_, 0 ];
+         } elsif ( $_ >= $params->{switch_on_time} && $_ < $params->{switch_off_time} ) {
+             push @out, [ $_, 1 ];
+         } else {
+             push @out, [ $_, 0 ];
+         }
+     }
+     return \@out;
 }
 
 sub _get_as_hash {

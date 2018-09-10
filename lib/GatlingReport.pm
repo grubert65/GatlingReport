@@ -189,11 +189,14 @@ sub add_ct_experiment {
             my $graph = GatlingReport::GraphData->new();
             $time_seq //= $graph->get_time_sequence( $self->report_dir.'/js/all_sessions.js');
             $DB::single=1;
+            my $duration = ($run->{activity}->{pauses} && $run->{activity}->{pauses}->{after} ) ?
+                $run->{duration} + $run->{activity}->{pauses}->{after} : $run->{duration};
+
             my $switch_on_time = parsedate( "$run->{start} GMT", SUBSECOND => 1 );
             my $data = $graph->set_on_off_time_sequence( 
                 time_sequence   => $time_seq,
                 switch_on_time  => $switch_on_time,
-                duration        => $run->{duration}
+                duration        => $duration
             );
             my $name = $run->{activity}->{provider}->{func}.'_'.$action_index;
             $graph->name( $name );
