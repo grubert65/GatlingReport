@@ -188,7 +188,6 @@ sub add_ct_experiment {
 #           - action start/end times
             my $graph = GatlingReport::GraphData->new();
             $time_seq //= $graph->get_time_sequence( $self->report_dir.'/js/all_sessions.js');
-            $DB::single=1;
             my $duration = ($run->{activity}->{pauses} && $run->{activity}->{pauses}->{after} ) ?
                 $run->{duration} + $run->{activity}->{pauses}->{after} : $run->{duration};
 

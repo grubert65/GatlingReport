@@ -210,10 +210,11 @@ sub set_on_off_time_sequence {
     my @time_seq = @{$params->{time_sequence}};
     $params->{switch_off_time} = $params->{switch_on_time} + $params->{duration};
 
-    $DB::single=1;
     $params->{switch_on_time}  = int ( $params->{switch_on_time}  * 1000 );
     $params->{switch_off_time} = int ( $params->{switch_off_time} * 1000 );
+    push @time_seq, $params->{switch_on_time}-1;
     push @time_seq, $params->{switch_on_time};
+    push @time_seq, $params->{switch_off_time}-1;
     push @time_seq, $params->{switch_off_time};
 
     @time_seq = sort { $a <=> $b } @time_seq;
