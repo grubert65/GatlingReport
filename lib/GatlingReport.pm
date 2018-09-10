@@ -2,8 +2,9 @@ package GatlingReport;
 
 use Moose;
 use HTML::TreeBuilder 5 -weak; # Ensure weak references in use
+use File::Slurp     qw( read_file );
 use Log::Log4perl;
-use JSON::Syck qw( LoadFile );
+use JSON::Syck      qw( LoadFile );
 use Time::ParseDate qw( parsedate );
 
 use GatlingReport::GraphData;
@@ -32,6 +33,9 @@ Perhaps a little code snippet.
     my $o = GatlingReport->new();
     $o->parse_report( $report_file );
 
+    # Given a chaostoolkit experiment journal
+    # this will add all successful actions to
+    # the response times graph
     $o->add_ct_experiment( $ct_journal_file );
 
     $o->dump_report();
@@ -49,6 +53,7 @@ has 'log' => (
 
 has 'report_dir'  => ( is => 'rw', required => 1 );
 has 'out_label'   => ( is  => 'rw', isa => 'Str', default => '_updated' );
+has 'varnames'    => ( is => 'ro', isa => 'ArrayRef', writer => '_set_varnames' );
 has 'report_tree' => ( 
     is => 'ro', 
     isa => 'HTML::TreeBuilder', 
@@ -96,6 +101,8 @@ sub parse_report {
 =head3 DESCRIPTION
 
 Stores the report in the same report folder, with filename index<$label>.
+Then, if some javascript variable names have been defined, it opens
+the file again and add after the call to allUsersData the list of variables....
 
 =cut
 
@@ -103,9 +110,23 @@ Stores the report in the same report folder, with filename index<$label>.
 sub dump_report {
     my $self = shift;
 
-    open ( my $fh, ">$self->{report_dir}/index$self->{out_label}.html" );
+    my $filename = "$self->{report_dir}/index$self->{out_label}.html";
+    open ( my $fh, ">$filename" );
     print $fh $self->report_tree->as_HTML;
     close $fh;
+
+    if ( $self->varnames ) {
+        my $var_text = join(', ', @{$self->varnames} );
+        my $text = read_file( $filename );
+        if ( $text =~ /allUsersData,/ ) {
+            my $new_text = $`.$var_text.','.$';
+
+            open ( my $fh, ">$filename" );
+            print $fh $new_text;
+            close $fh;
+        }
+    }
+    return 1;
 }
 
 
@@ -119,7 +140,7 @@ $ct_journal : the chaostoolkit journal file
 
 =head3 OUTPUT
 
-1 or die in case of errors
+the number of actions added or die in case of errors
 
 =head3 DESCRIPTION
 
@@ -144,13 +165,13 @@ sub add_ct_experiment {
     die "ChaosToolkit journal file not exists or not readable\n"
         unless -f $ct_journal;
     
-        $DB::single=1;
     # read the journal and create a single js file for each action and add it to the report folder.
     my $ct_journal_data = LoadFile($ct_journal);
     
 # * for each action in the run section: 
     my $action_index=0;
     my $time_seq;
+    my @varnames;
     foreach my $run ( @{$ct_journal_data->{run}} ) {
         if ( $run->{activity}->{type} eq 'action' && $run->{status} eq 'succeeded' ) {
 
@@ -159,7 +180,6 @@ sub add_ct_experiment {
 #       to create the action graph data I need:
 #           - graph time start/end
 #           - action start/end times
-            $DB::single=1;
             my $graph = GatlingReport::GraphData->new();
             $time_seq //= $graph->get_time_sequence( $self->report_dir.'/js/all_sessions.js');
             my $data = $graph->set_on_off_time_sequence( 
@@ -170,16 +190,25 @@ sub add_ct_experiment {
             my $name = $run->{activity}->{provider}->{func}.'_'.$action_index;
             $graph->name( $name );
             $graph->color('#050505');
-            my $out = $graph->process( $data );
+            my ( $varname, $out ) = $graph->process( $data );
 
             my $graph_filepath = "$self->{report_dir}/js/$name.js";
             open (my $fh, ">$graph_filepath") or die "Error opening file $graph_filepath:$!\n";
             print $fh $out;
             close $fh;
 
+            # add the js file to gatling report...
+            my $elem = HTML::Element->new('script', src => "js/$name.js", type => 'text/javascript');
+            $self->report_tree->{_content}->[0]->push_content( $elem );
+            push @varnames, $varname;
+
             $action_index++;
         }
     }
+
+    $self->_set_varnames( \@varnames ) if ( scalar @varnames );
+
+    return $action_index;
 }
 
 

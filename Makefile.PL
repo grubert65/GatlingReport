@@ -18,8 +18,10 @@ WriteMakefile(
         'Test::More' => '0',
     },
     PREREQ_PM => {
+        'DateTime'          => 0,
         'JSON::Syck'        => 0,
         'String::CamelCase' => 0,
+        'Time::ParseDate'   => 0,
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'GatlingReport-*' },

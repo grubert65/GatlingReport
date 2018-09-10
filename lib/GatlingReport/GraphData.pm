@@ -196,7 +196,7 @@ sub set_on_off_time_sequence {
     die "Switch on time must be smaller that switch off time\n"
         unless ( $switch_on_time <= $switch_off_time );
 
-    $switch_off_time += 1 if ( $switch_on_time == $switch_off_time );
+#     $switch_off_time += 1 if ( $switch_on_time == $switch_off_time );
 
     my @out;
     foreach ( @{$time_sequence} ) {
@@ -216,14 +216,15 @@ sub set_on_off_time_sequence {
 sub process {
     my ( $self, $data ) = @_;
 
+    my $varname = get_varname( $self->{name} );
+
     my $params = {
-        var_name    => get_varname( $self->{name} ),
+        var_name    => $varname,
         color       => $self->{color},
         name        => $self->{name},
         data        => $data
     };
 
-    $DB::single=1;
     my $t = Template->new({
             PRE_CHOMP  => 1,
         }) or die $Template::ERROR, "\n";
@@ -231,7 +232,7 @@ sub process {
     my $template = $self->template;
     $t->process(\$template, $params, \$out)
         or die $Template::ERROR, "\n";
-    return $out;
+    return ( $varname, $out);
 }
 1; 
  
