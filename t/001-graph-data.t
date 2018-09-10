@@ -14,7 +14,9 @@ ok( my $o = GatlingReport::GraphData->new(), 'new' );
 ok( my $time_seq = $o->get_time_sequence( './data/exp1/gatling-report/js/all_sessions.js'), 'get_time_sequence' );
 
 ok( my $data = $o->set_on_off_time_sequence(
-        $time_seq, 1536318951, 1536318981), 'set_on_off_time_sequence');
+        time_sequence   => $time_seq, 
+        switch_on_time  => 1536318951, 
+        duration        => 0.01379), 'set_on_off_time_sequence');
 
 
 ok( $o->name('Foo') );

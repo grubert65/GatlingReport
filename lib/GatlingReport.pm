@@ -121,6 +121,10 @@ sub dump_report {
         if ( $text =~ /allUsersData,/ ) {
             my $new_text = $`.$var_text.','.$';
 
+            # now change the "Active Users" label...
+            my $p = rindex($new_text, "Active Users");
+            substr($new_text, $p, length("Experiments "), "Experiments ") if ( $p );
+
             open ( my $fh, ">$filename" );
             print $fh $new_text;
             close $fh;
@@ -184,10 +188,12 @@ sub add_ct_experiment {
 #           - action start/end times
             my $graph = GatlingReport::GraphData->new();
             $time_seq //= $graph->get_time_sequence( $self->report_dir.'/js/all_sessions.js');
+            $DB::single=1;
+            my $switch_on_time = parsedate( "$run->{start} GMT", SUBSECOND => 1 );
             my $data = $graph->set_on_off_time_sequence( 
-                $time_seq,
-                int ( parsedate( "$run->{start} GMT" ) ),
-                int ( parsedate( "$run->{end} GMT" ) )
+                time_sequence   => $time_seq,
+                switch_on_time  => $switch_on_time,
+                duration        => $run->{duration}
             );
             my $name = $run->{activity}->{provider}->{func}.'_'.$action_index;
             $graph->name( $name );

@@ -24,6 +24,17 @@ our $VERSION = '0.01';
         color   => '#020202'    # defaults to '#000000'
     );
 
+    # given a javascript file for a highgraph object
+    # extracts the time sequence
+    my $time_seq = $o->get_time_sequence('./data/exp1/gatling-report/js/all_sessions.js');
+
+    # prepares the data array for an on/off graph
+    my $data = $o->set_on_off_time_sequence(
+        time_sequence    => $time_seq, 
+        switch_on_time   => 1536318951,
+        duration         => 01379
+    );
+
     # get the Graph data javascript text...
     my $out = $gd->process( $data );
 
@@ -159,7 +170,7 @@ sub get_time_sequence {
     my @time_seq;
 
     foreach ( @$data ) {
-        push @time_seq, $_->[0]/1000;
+        push @time_seq, $_->[0];
     }
 
     return \@time_seq;
@@ -172,9 +183,11 @@ sub get_time_sequence {
 
 =head3 INPUT
 
-$time_sequence      : an array of times in seconds since the epoch
-$switch_on_time     : start time in seconds since the epoch
-$switch_off_time    : start time in seconds since the epoch
+An hash or hashref with the following keys:
+
+time_sequence   : an array of times in seconds since the epoch
+switch_on_time  : switch on time in seconds since the epoch
+duration        : duration of the "on" phase
 
 =head3 OUTPUT
 
@@ -191,27 +204,42 @@ passed time sequence, values are 1 in the interval
 
 #=============================================================
 sub set_on_off_time_sequence {
-    my ( $self, $time_sequence, $switch_on_time, $switch_off_time ) = @_;
+    my $self = shift;
+    my $params = _get_as_hash( @_ );
 
-    die "Switch on time must be smaller that switch off time\n"
-        unless ( $switch_on_time <= $switch_off_time );
+    my @time_seq = map{ [ $_, 0 ] } @{$params->{time_sequence}};
+    $params->{switch_off_time} = $params->{switch_on_time} + $params->{duration};
 
-#     $switch_off_time += 1 if ( $switch_on_time == $switch_off_time );
+    push @time_seq, [ $params->{switch_on_time}*1000, 1];
+    push @time_seq, [ $params->{switch_off_time}*1000, 0];
 
-    my @out;
-    foreach ( @{$time_sequence} ) {
+    @time_seq = sort { $a->[0] <=> $b->[0] } @time_seq;
 
-        if ( $_ < $switch_on_time ) {
-            push @out, [ $_ * 1000, 0 ];
-        } elsif ( $_ >= $switch_on_time && $_ <= $switch_off_time ) {
-            push @out, [ $_ * 1000, 1 ];
-        } else {
-            push @out, [ $_ * 1000, 0 ];
-        }
-    }
-    return \@out;
+#     my @out;
+#     foreach ( @{$time_sequence} ) {
+    # 
+#         if ( $_ < $params->{switch_on_time} ) {
+#             push @out, [ $_ * 1000, 0 ];
+#         } elsif ( $_ >= $params->{switch_on_time} && $_ <= $params->{switch_off_time}+1 ) {
+#             push @out, [ $_ * 1000, 1 ];
+#         } else {
+#             push @out, [ $_ * 1000, 0 ];
+#         }
+#     }
+#     return \@out;
+
+    return \@time_seq;
 }
 
+sub _get_as_hash {
+    my $h={};
+    if ( ref $_[0] eq 'HASH' ) {
+        $h = shift;
+    } else {
+        %$h = @_;
+    }
+    return $h;
+}
 
 sub process {
     my ( $self, $data ) = @_;
