@@ -186,7 +186,11 @@ sub add_ct_experiment {
 #       to create the action graph data I need:
 #           - graph time start/end
 #           - action start/end times
-            my $graph = GatlingReport::GraphData->new();
+            my $graph = GatlingReport::GraphData->new(
+                color   => '#050505',
+                name    => $run->{activity}->{name},
+                varname => $run->{activity}->{provider}->{func}.$action_index
+            );
             $time_seq //= $graph->get_time_sequence( $self->report_dir.'/js/all_sessions.js');
             my $duration = ($run->{activity}->{pauses} && $run->{activity}->{pauses}->{after} ) ?
                 $run->{duration} + $run->{activity}->{pauses}->{after} : $run->{duration};
@@ -197,20 +201,17 @@ sub add_ct_experiment {
                 switch_on_time  => $switch_on_time,
                 duration        => $duration
             );
-            my $name = $run->{activity}->{provider}->{func}.'_'.$action_index;
-            $graph->name( $name );
-            $graph->color('#050505');
-            my ( $varname, $out ) = $graph->process( $data );
+            my $out = $graph->process( $data );
 
-            my $graph_filepath = "$self->{report_dir}/js/$name.js";
+            my $graph_filepath = "$self->{report_dir}/js/$graph->{varname}.js";
             open (my $fh, ">$graph_filepath") or die "Error opening file $graph_filepath:$!\n";
             print $fh $out;
             close $fh;
 
             # add the js file to gatling report...
-            my $elem = HTML::Element->new('script', src => "js/$name.js", type => 'text/javascript');
+            my $elem = HTML::Element->new('script', src => "js/$graph->{varname}.js", type => 'text/javascript');
             $self->report_tree->{_content}->[0]->push_content( $elem );
-            push @varnames, $varname;
+            push @varnames, $graph->{varname};
 
             $action_index++;
         }

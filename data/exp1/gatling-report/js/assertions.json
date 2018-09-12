@@ -1,7 +1,7 @@
 {
   "simulation": "simulations.PeakAndSoak",
   "simulationId": "peakandsoak",
-  "start": 1536318943443,
+  "start": 1536760220991,
   "description": "",
   "scenarios": ["PeakAndSoakScenario"],
   "assertions": [
@@ -21,7 +21,7 @@
   "expectedValues": [50.0],
   "result": false,
   "message": "Global: 99th percentile of response time is less than 50.0",
-  "actualValue": [7487.0]
+  "actualValue": [14764.0]
 }
   ]
 }

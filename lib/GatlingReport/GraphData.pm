@@ -98,8 +98,8 @@ use File::Slurp       qw( read_file );
 use JSON              qw( decode_json );
 
 has 'name'  => ( is => 'rw', isa => 'Str', default => 'Test' );
+has 'varname'=>( is => 'rw', isa => 'Str', lazy => 1, default => 'Test', trigger => \&_set_varname);
 has 'color' => ( is => 'rw', isa => 'Str', default => '#000000' );
-has 'out_str' =>(is => 'ro', isa => 'Str', lazy => 1, builder => '_set_out_str' );
 has 'template'=>(
     is  => 'ro',
     isa => 'Str',
@@ -121,12 +121,12 @@ has 'template'=>(
 EOT
     });
 
-sub get_varname {
-    my $name = shift;
+sub _set_varname {
+    my ( $self, $name ) = @_;
 
     $name = camelize ( $name );
     $name =~ s/\s//g;
-    return ( lcfirst $name );
+    $self->{varname} =  lcfirst $name;
 }
 
 #=============================================================
@@ -245,10 +245,8 @@ sub _get_as_hash {
 sub process {
     my ( $self, $data ) = @_;
 
-    my $varname = get_varname( $self->{name} );
-
     my $params = {
-        var_name    => $varname,
+        var_name    => $self->{varname},
         color       => $self->{color},
         name        => $self->{name},
         data        => $data
@@ -261,18 +259,6 @@ sub process {
     my $template = $self->template;
     $t->process(\$template, $params, \$out)
         or die $Template::ERROR, "\n";
-    return ( $varname, $out);
+    return $out;
 }
 1; 
- 
-__DATA__
-[% var_name %] = {
-    color: '[% color %]',
-    name: '[% name %]',
-    data: [ [% FOREACH item IN data %]
-        [ [% item.0 %], [% item.1 %] ],
-    [% END %] ],
-    tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }, 
-    zIndex: 20, 
-    yAxis: 1
-};

@@ -30,7 +30,7 @@
     "method": [
       {
         "type": "action",
-        "name": "delete_all_toxics",
+        "name": "delete all toxics",
         "provider": {
           "type": "python",
           "module": "chaostp.proxy.actions",
@@ -63,7 +63,7 @@
       },
       {
         "type": "action",
-        "name": "delete_all_toxics",
+        "name": "delete all toxics",
         "provider": {
           "type": "python",
           "module": "chaostp.proxy.actions",
@@ -90,13 +90,47 @@
           }
         },
         "pauses": {
-          "before": 10,
+          "before": 20,
           "after": 10
         }
       },
       {
         "type": "action",
-        "name": "delete_all_toxics",
+        "name": "delete all toxics",
+        "provider": {
+          "type": "python",
+          "module": "chaostp.proxy.actions",
+          "func": "delete_all_toxics",
+          "arguments": {
+            "name": "c1"
+          }
+        }
+      },
+      {
+        "type": "action",
+        "name": "500ms latency",
+        "provider": {
+          "type": "python",
+          "module": "chaostp.proxy.actions",
+          "func": "add_toxic",
+          "arguments": {
+            "name": "c1",
+            "type": "latency",
+            "stream": "downstream",
+            "attributes": {
+              "latency": 500,
+              "jitter": 200
+            }
+          }
+        },
+        "pauses": {
+          "before": 20,
+          "after": 20
+        }
+      },
+      {
+        "type": "action",
+        "name": "delete all toxics",
         "provider": {
           "type": "python",
           "module": "chaostp.proxy.actions",
@@ -110,7 +144,7 @@
     "rollbacks": [],
     "dry": false
   },
-  "start": "2018-09-07T11:15:41.830060",
+  "start": "2018-09-12T13:50:48.784183",
   "status": "completed",
   "steady_states": {
     "before": {
@@ -132,9 +166,9 @@
           },
           "output": "c1",
           "status": "succeeded",
-          "start": "2018-09-07T11:15:41.831375",
-          "end": "2018-09-07T11:15:41.841138",
-          "duration": 0.009763,
+          "start": "2018-09-12T13:50:48.785193",
+          "end": "2018-09-12T13:50:48.795166",
+          "duration": 0.009973,
           "tolerance_met": true
         }
       ]
@@ -158,9 +192,9 @@
           },
           "output": "c1",
           "status": "succeeded",
-          "start": "2018-09-07T11:16:21.941556",
-          "end": "2018-09-07T11:16:21.947929",
-          "duration": 0.006373,
+          "start": "2018-09-12T13:52:18.923322",
+          "end": "2018-09-12T13:52:18.929983",
+          "duration": 0.006661,
           "tolerance_met": true
         }
       ]
@@ -170,7 +204,7 @@
     {
       "activity": {
         "type": "action",
-        "name": "delete_all_toxics",
+        "name": "delete all toxics",
         "provider": {
           "type": "python",
           "module": "chaostp.proxy.actions",
@@ -182,9 +216,9 @@
       },
       "output": 1,
       "status": "succeeded",
-      "start": "2018-09-07T11:15:41.841771",
-      "end": "2018-09-07T11:15:41.868554",
-      "duration": 0.026783
+      "start": "2018-09-12T13:50:48.795494",
+      "end": "2018-09-12T13:50:48.807647",
+      "duration": 0.012153
     },
     {
       "activity": {
@@ -210,14 +244,14 @@
       },
       "output": 1,
       "status": "succeeded",
-      "start": "2018-09-07T11:15:51.875988",
-      "end": "2018-09-07T11:15:51.889778",
-      "duration": 0.01379
+      "start": "2018-09-12T13:50:58.809478",
+      "end": "2018-09-12T13:50:58.827455",
+      "duration": 0.017977
     },
     {
       "activity": {
         "type": "action",
-        "name": "delete_all_toxics",
+        "name": "delete all toxics",
         "provider": {
           "type": "python",
           "module": "chaostp.proxy.actions",
@@ -229,9 +263,9 @@
       },
       "output": 1,
       "status": "succeeded",
-      "start": "2018-09-07T11:16:01.892489",
-      "end": "2018-09-07T11:16:01.905998",
-      "duration": 0.013509
+      "start": "2018-09-12T13:51:08.831361",
+      "end": "2018-09-12T13:51:08.847636",
+      "duration": 0.016275
     },
     {
       "activity": {
@@ -251,20 +285,20 @@
           }
         },
         "pauses": {
-          "before": 10,
+          "before": 20,
           "after": 10
         }
       },
       "output": 1,
       "status": "succeeded",
-      "start": "2018-09-07T11:16:11.907716",
-      "end": "2018-09-07T11:16:11.915504",
-      "duration": 0.007788
+      "start": "2018-09-12T13:51:28.850399",
+      "end": "2018-09-12T13:51:28.860389",
+      "duration": 0.00999
     },
     {
       "activity": {
         "type": "action",
-        "name": "delete_all_toxics",
+        "name": "delete all toxics",
         "provider": {
           "type": "python",
           "module": "chaostp.proxy.actions",
@@ -276,12 +310,60 @@
       },
       "output": 1,
       "status": "succeeded",
-      "start": "2018-09-07T11:16:21.917603",
-      "end": "2018-09-07T11:16:21.941075",
-      "duration": 0.023472
+      "start": "2018-09-12T13:51:38.865767",
+      "end": "2018-09-12T13:51:38.884654",
+      "duration": 0.018887
+    },
+    {
+      "activity": {
+        "type": "action",
+        "name": "500ms latency",
+        "provider": {
+          "type": "python",
+          "module": "chaostp.proxy.actions",
+          "func": "add_toxic",
+          "arguments": {
+            "name": "c1",
+            "type": "latency",
+            "stream": "downstream",
+            "attributes": {
+              "latency": 500,
+              "jitter": 200
+            }
+          }
+        },
+        "pauses": {
+          "before": 20,
+          "after": 20
+        }
+      },
+      "output": 1,
+      "status": "succeeded",
+      "start": "2018-09-12T13:51:58.890885",
+      "end": "2018-09-12T13:51:58.902557",
+      "duration": 0.011672
+    },
+    {
+      "activity": {
+        "type": "action",
+        "name": "delete all toxics",
+        "provider": {
+          "type": "python",
+          "module": "chaostp.proxy.actions",
+          "func": "delete_all_toxics",
+          "arguments": {
+            "name": "c1"
+          }
+        }
+      },
+      "output": 1,
+      "status": "succeeded",
+      "start": "2018-09-12T13:52:18.907791",
+      "end": "2018-09-12T13:52:18.922748",
+      "duration": 0.014957
     }
   ],
   "rollbacks": [],
-  "end": "2018-09-07T11:16:21.948570",
-  "duration": 40.14502191543579
+  "end": "2018-09-12T13:52:18.931206",
+  "duration": 90.17516279220581
 }

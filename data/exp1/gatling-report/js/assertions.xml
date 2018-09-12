@@ -3,6 +3,6 @@
   <system-out>Global: percentage of failed requests is less than or equal to 1.0</system-out>
 </testcase>
 <testcase name="Global: 99th percentile of response time is less than 50.0" status="false" time="0">
-  <failure type="Global">Actual value: 7487.0</failure>
+  <failure type="Global">Actual value: 14764.0</failure>
 </testcase>
 </testsuite>
