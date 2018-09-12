@@ -1,15 +1,9 @@
 GatlingReport
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
-
-A README file is required for CPAN modules since CPAN extracts the README
-file from a module distribution so that people browsing the archive
-can use it to get an idea of the module's uses. It is usually a good idea
-to provide version information here so that people can decide whether
-fixes for the module are worth downloading.
+A small perl package to update the html report from Gatling.
+It is far from being a generic lib to harness around the report, 
+currently provides only a method to add actions from a chaos-toolkit
+experiment report to the Response times graph.
 
 
 INSTALLATION
