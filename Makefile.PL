@@ -10,7 +10,10 @@ WriteMakefile(
     ABSTRACT_FROM    => 'lib/GatlingReport.pm',
     LICENSE          => 'artistic_2',
     PL_FILES         => {},
-    EXE_FILES        => [ 'scripts/update-gatling-report.pl' ],
+    EXE_FILES        => [ 
+        'scripts/update-gatling-report.pl',
+        'scripts/get-gatling-report-dir.pl'
+    ],
     MIN_PERL_VERSION => '5.006',
     CONFIGURE_REQUIRES => {
         'ExtUtils::MakeMaker' => '0',
