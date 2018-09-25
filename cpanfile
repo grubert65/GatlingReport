@@ -1,4 +1,11 @@
+requires 'Moose';
+requires 'Template';
+requires 'String::CamelCase'; 
+requires 'HTML::TreeBuilder';
+requires 'File::Slurp';
+requires 'Log::Log4perl';
 requires 'DateTime';
+requires 'JSON';
 requires 'JSON::Syck';
 requires 'String::CamelCase';
 requires 'Time::ParseDate';
