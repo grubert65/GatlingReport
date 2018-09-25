@@ -1,4 +1,3 @@
-
 requires 'DateTime';
 requires 'JSON::Syck';
 requires 'String::CamelCase';
