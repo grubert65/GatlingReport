@@ -12,7 +12,8 @@ WriteMakefile(
     PL_FILES         => {},
     EXE_FILES        => [ 
         'scripts/update-gatling-report.pl',
-        'scripts/get-gatling-report-dir.pl'
+        'scripts/get-gatling-report-dir.pl',
+        'scripts/get-gatling-report.pl'
     ],
     MIN_PERL_VERSION => '5.006',
     CONFIGURE_REQUIRES => {

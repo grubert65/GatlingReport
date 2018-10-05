@@ -179,7 +179,9 @@ sub add_ct_experiment {
     my $time_seq;
     my @varnames;
     foreach my $run ( @{$ct_journal_data->{run}} ) {
-        if ( $run->{activity}->{type} eq 'action' && $run->{status} eq 'succeeded' ) {
+        if ( $run->{activity}->{type} eq 'action' && 
+             $run->{activity}->{provider}->{type} eq 'python' && 
+             $run->{status} eq 'succeeded' ) {
 
 # *     create a new graph js file that defines a new var with data for that action. 
 #       the file has to be saved in the js folder
